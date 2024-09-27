@@ -2,43 +2,53 @@ using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
-    public int rows = 5;  // Количество рядов
-    public int cols = 9;  // Количество столбцов
-    public float cellWidth = 1f;  // Ширина ячеек
-    public float cellHeight = 0.75f;  // Высота ячеек (делаем их прямоугольными)
-    public Vector3 gridOrigin = Vector3.zero;  // Начальная позиция сетки
+    public int rows = 5; // Количество строк
+    public int cols = 9; // Количество колонок
+    public float cellSize = 1f; // Размер каждой ячейки
+    public Vector3 gridOrigin = Vector3.zero; // Позиция, с которой начинается сетка
 
-    public Vector3[,] gridPositions;  // Массив для хранения позиций ячеек
+
+    private Vector3[,] gridPositions; // Массив для хранения позиций ячеек
 
     void Start()
     {
-        CreateGrid();  // Создание сетки при старте игры
+        CreateGrid(); // Создаем сетку при старте игры
     }
 
-    // Создание сетки
     void CreateGrid()
     {
-        gridPositions = new Vector3[rows, cols];
+        gridPositions = new Vector3[rows, cols]; // Инициализируем массив
 
         for (int row = 0; row < rows; row++)
         {
             for (int col = 0; col < cols; col++)
             {
-                // Позиции ячеек с учетом их ширины, высоты и начального положения сетки
-                gridPositions[row, col] = gridOrigin + new Vector3(col * cellWidth, row * cellHeight, 0);
+                // Вычисляем позицию каждой ячейки с учетом начальной позиции gridOrigin
+                gridPositions[row, col] = gridOrigin + new Vector3(col * cellSize, row * cellSize, 0);
+
+                // Для отладки отображаем линии сетки (если нужно)
+                Debug.DrawLine(gridOrigin + new Vector3(col * cellSize, 0, 0), gridOrigin + new Vector3(col * cellSize, rows * cellSize, 0), Color.white, 100f);
+                Debug.DrawLine(gridOrigin + new Vector3(0, row * cellSize, 0), gridOrigin + new Vector3(cols * cellSize, row * cellSize, 0), Color.white, 100f);
             }
         }
     }
 
-    // Возвращает ближайшую ячейку по позиции мыши
-    public Vector3 GetGridCellFromPosition(Vector3 position)
+
+    // Метод для получения позиции ячейки
+    public Vector3 GetCellPosition(int row, int col)
     {
-        Vector3 localPosition = position - gridOrigin;  // Считаем локальную позицию относительно начала сетки
+        if (row >= 0 && row < rows && col >= 0 && col < cols)
+        {
+            return gridPositions[row, col];
+        }
+        return Vector3.zero;
+    }
 
-        // Вычисляем ближайшие индексы ячейки (учитывая размеры ячеек)
-        int col = Mathf.Clamp(Mathf.FloorToInt(localPosition.x / cellWidth), 0, cols - 1);
-        int row = Mathf.Clamp(Mathf.FloorToInt(localPosition.y / cellHeight), 0, rows - 1);
-
-        return gridPositions[row, col];  // Возвращаем позицию центра ячейки
+    // Метод для нахождения ближайшей ячейки по позиции мыши
+    public Vector2Int GetGridCellFromPosition(Vector3 position)
+    {
+        int row = Mathf.Clamp(Mathf.FloorToInt(position.y / cellSize), 0, rows - 1);
+        int col = Mathf.Clamp(Mathf.FloorToInt(position.x / cellSize), 0, cols - 1);
+        return new Vector2Int(row, col);
     }
 }

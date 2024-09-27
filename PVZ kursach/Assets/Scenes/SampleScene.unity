@@ -156,7 +156,6 @@ MonoBehaviour:
   plantPrefab: {fileID: 1458979957}
   horizontalLine: {fileID: 960538126}
   verticalLine: {fileID: 556344779}
-  transparentLineMaterial: {fileID: 2100000, guid: 355b4630ed26e214fa8132862a1823cb, type: 2}
 --- !u!4 &2671192
 Transform:
   m_ObjectHideFlags: 0
@@ -793,7 +792,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1163061297}
   - component: {fileID: 1163061296}
-  - component: {fileID: 1163061298}
   m_Layer: 0
   m_Name: backgroung_level1
   m_TagString: Untagged
@@ -868,27 +866,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1163061298
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163061295}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 61bf5405196fd624caca42d3c1d83ce3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1458979957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,8 +981,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rows: 5
   cols: 9
-  cellWidth: 1
-  cellHeight: 0.75
+  cellSize: 1
   gridOrigin: {x: -3, y: -3, z: 0}
 --- !u!4 &1604440803
 Transform:
