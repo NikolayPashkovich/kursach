@@ -39,12 +39,12 @@ public class PlantPlacement : MonoBehaviour
         Vector3 cellPosition = gridManager.GetCellPosition(gridCell.x, gridCell.y);
 
         // Рисуем горизонтальную линию
-        horizontalLine.SetPosition(0, new Vector3(0, cellPosition.y, 0));
-        horizontalLine.SetPosition(1, new Vector3(gridManager.cols * gridManager.cellSize, cellPosition.y, 0));
+        horizontalLine.SetPosition(0, new Vector3((gridManager.gridOrigin.x-gridManager.cellSize.x/2), cellPosition.y, 0));
+        horizontalLine.SetPosition(1, new Vector3((gridManager.gridOrigin.x - gridManager.cellSize.x / 2) + gridManager.cols * gridManager.cellSize.x, cellPosition.y, 0));
 
         // Рисуем вертикальную линию
-        verticalLine.SetPosition(0, new Vector3(cellPosition.x, 0, 0));
-        verticalLine.SetPosition(1, new Vector3(cellPosition.x, gridManager.rows * gridManager.cellSize, 0));
+        verticalLine.SetPosition(0, new Vector3(cellPosition.x, (gridManager.gridOrigin.y - gridManager.cellSize.y / 2), 0));
+        verticalLine.SetPosition(1, new Vector3(cellPosition.x, (gridManager.gridOrigin.y - gridManager.cellSize.y / 2) + gridManager.rows * gridManager.cellSize.y, 0));
     }
 
     void PlacePlant()

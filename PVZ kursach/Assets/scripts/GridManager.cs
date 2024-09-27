@@ -4,7 +4,7 @@ public class GridManager : MonoBehaviour
 {
     public int rows = 5; // Количество строк
     public int cols = 9; // Количество колонок
-    public float cellSize = 1f; // Размер каждой ячейки
+    public Vector2 cellSize = new Vector2( 1,1); // Размер каждой ячейки
     public Vector3 gridOrigin = Vector3.zero; // Позиция, с которой начинается сетка
 
 
@@ -24,11 +24,11 @@ public class GridManager : MonoBehaviour
             for (int col = 0; col < cols; col++)
             {
                 // Вычисляем позицию каждой ячейки с учетом начальной позиции gridOrigin
-                gridPositions[row, col] = gridOrigin + new Vector3(col * cellSize, row * cellSize, 0);
+                gridPositions[row, col] = gridOrigin + new Vector3(col * cellSize.x, row * cellSize.y, 0);
 
                 // Для отладки отображаем линии сетки (если нужно)
-                Debug.DrawLine(gridOrigin + new Vector3(col * cellSize, 0, 0), gridOrigin + new Vector3(col * cellSize, rows * cellSize, 0), Color.white, 100f);
-                Debug.DrawLine(gridOrigin + new Vector3(0, row * cellSize, 0), gridOrigin + new Vector3(cols * cellSize, row * cellSize, 0), Color.white, 100f);
+                Debug.DrawLine(gridOrigin + new Vector3(col * cellSize.x, 0, 0), gridOrigin + new Vector3(col * cellSize.x, rows * cellSize.x, 0), Color.white, 100f);
+                Debug.DrawLine(gridOrigin + new Vector3(0, row * cellSize.y, 0), gridOrigin + new Vector3(cols * cellSize.y, row * cellSize.y, 0), Color.white, 100f);
             }
         }
     }
@@ -45,10 +45,12 @@ public class GridManager : MonoBehaviour
     }
 
     // Метод для нахождения ближайшей ячейки по позиции мыши
-    public Vector2Int GetGridCellFromPosition(Vector3 position)
+    public Vector2Int GetGridCellFromPosition(Vector2 position)
     {
-        int row = Mathf.Clamp(Mathf.FloorToInt(position.y / cellSize), 0, rows - 1);
-        int col = Mathf.Clamp(Mathf.FloorToInt(position.x / cellSize), 0, cols - 1);
+
+        position = position - (Vector2)gridOrigin + (cellSize/2);
+        int row = Mathf.Clamp(Mathf.FloorToInt(position.y / cellSize.y), 0, rows );
+        int col = Mathf.Clamp(Mathf.FloorToInt(position.x / cellSize.x), 0, cols );
         return new Vector2Int(row, col);
     }
 }
