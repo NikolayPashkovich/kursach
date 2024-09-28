@@ -49,6 +49,7 @@ public class GridManager : MonoBehaviour
     {
 
         position = position - (Vector2)gridOrigin + (cellSize/2);
+        if (position.x < 0 || position.y < 0 || position.x > cols * cellSize.x || position.y > rows*cellSize.y) { return new Vector2Int(-1, -1); }
         int row = Mathf.Clamp(Mathf.FloorToInt(position.y / cellSize.y), 0, rows );
         int col = Mathf.Clamp(Mathf.FloorToInt(position.x / cellSize.x), 0, cols );
         return new Vector2Int(row, col);
