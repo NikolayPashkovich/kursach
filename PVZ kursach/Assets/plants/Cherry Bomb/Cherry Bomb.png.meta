@@ -1,0 +1,580 @@
+fileFormatVersion: 2
+guid: 20411e699bf9c9c489f18a74ceec3243
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cherry Bomb_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 68
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327d3e7b5bee63f4884665c354e39aed
+      internalID: -1600910177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cherry Bomb_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 68
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5c51ec2d40132f4094e2a3c05997ef2
+      internalID: 1339886217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cherry Bomb_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 68
+        width: 45
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b4e139a7a0d07549b0041152033e71b
+      internalID: -1677153287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cherry Bomb_3
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 68
+        width: 45
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3faffbcefa3a71147b3696c01983e970
+      internalID: -2121411598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cherry Bomb_4
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 68
+        width: 50
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617d9922fe33cae4284ca42dc073459e
+      internalID: 702153663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cherry Bomb_5
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 68
+        width: 50
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a57e19073dd4704e92cb01f71da4d5d
+      internalID: 1075515853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cherry Bomb_44
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 68
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7894ced6c30ba724895adddfbe92ee95
+      internalID: -1295030356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cherry Bomb_45
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 69
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abf6b6a2b8de5dc4cb1a511c917483f8
+      internalID: 890787164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cherry Bomb_46
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 81
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c5ada8dc3fa3b40b68a51da48c372b
+      internalID: -696543591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cherry Bomb_47
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 0
+        width: 93
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400bbf5fe6f2cd54b9dee9d391bd68a4
+      internalID: 1038138860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cherry Bomb_48
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 0
+        width: 92
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b013339eab62b443b687b6894af08a1
+      internalID: 1517285225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cherry Bomb_49
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 91
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4908c74a139fd643b5595c8e5faec84
+      internalID: 1377107985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cherry Bomb_50
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 0
+        width: 90
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a8cbc38031b08f41829472038b5ab80
+      internalID: -270915548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cherry Bomb_55
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 0
+        width: 86
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd708fe401383f4483acdcb5aa50829
+      internalID: 1884578790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cherry Bomb_56
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d26748ca2b2c04b860f5aaa9736123
+      internalID: 528545862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cherry Bomb_57
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 0
+        width: 89
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba2ca942656b1444b9f3eb5860fbfd5
+      internalID: -1850667652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Cherry Bomb_0: -1600910177
+      Cherry Bomb_1: 1339886217
+      Cherry Bomb_10: 1129871048
+      Cherry Bomb_11: -848383069
+      Cherry Bomb_12: 107744234
+      Cherry Bomb_13: 1952375468
+      Cherry Bomb_14: -166340685
+      Cherry Bomb_15: 268609387
+      Cherry Bomb_16: 384857875
+      Cherry Bomb_17: 1937934391
+      Cherry Bomb_18: 1528282244
+      Cherry Bomb_19: 379368977
+      Cherry Bomb_2: -1677153287
+      Cherry Bomb_20: 2017685542
+      Cherry Bomb_21: 431956317
+      Cherry Bomb_22: -335182313
+      Cherry Bomb_23: 17451963
+      Cherry Bomb_24: -1892073893
+      Cherry Bomb_25: -185925780
+      Cherry Bomb_26: 186048153
+      Cherry Bomb_27: 1076137628
+      Cherry Bomb_28: 420103743
+      Cherry Bomb_29: -1384599436
+      Cherry Bomb_3: -2121411598
+      Cherry Bomb_30: 70122276
+      Cherry Bomb_31: -527812839
+      Cherry Bomb_32: 1428696058
+      Cherry Bomb_33: 1604441772
+      Cherry Bomb_34: 2021271250
+      Cherry Bomb_35: -1380803383
+      Cherry Bomb_36: 586752885
+      Cherry Bomb_37: -1672110462
+      Cherry Bomb_38: 841312980
+      Cherry Bomb_39: 1951441231
+      Cherry Bomb_4: 702153663
+      Cherry Bomb_40: -1234626556
+      Cherry Bomb_41: -81058264
+      Cherry Bomb_42: -1229070422
+      Cherry Bomb_43: -245794810
+      Cherry Bomb_44: -1295030356
+      Cherry Bomb_45: 890787164
+      Cherry Bomb_46: -696543591
+      Cherry Bomb_47: 1038138860
+      Cherry Bomb_48: 1517285225
+      Cherry Bomb_49: 1377107985
+      Cherry Bomb_5: 1075515853
+      Cherry Bomb_50: -270915548
+      Cherry Bomb_51: 1544104616
+      Cherry Bomb_52: -586334876
+      Cherry Bomb_53: 208726293
+      Cherry Bomb_54: 1529930702
+      Cherry Bomb_55: 1884578790
+      Cherry Bomb_56: 528545862
+      Cherry Bomb_57: -1850667652
+      Cherry Bomb_58: 1462466116
+      Cherry Bomb_59: 1210587185
+      Cherry Bomb_6: -1486036191
+      Cherry Bomb_60: -226202849
+      Cherry Bomb_61: -2024823579
+      Cherry Bomb_62: -573308138
+      Cherry Bomb_63: 363553864
+      Cherry Bomb_64: -1116915923
+      Cherry Bomb_65: 1775310767
+      Cherry Bomb_66: 58462882
+      Cherry Bomb_67: -887814111
+      Cherry Bomb_68: -824528399
+      Cherry Bomb_69: -1688367071
+      Cherry Bomb_7: -1721738561
+      Cherry Bomb_70: 261323340
+      Cherry Bomb_71: 2083213871
+      Cherry Bomb_72: 1858165498
+      Cherry Bomb_73: 993385499
+      Cherry Bomb_74: 1782115997
+      Cherry Bomb_75: 1630124760
+      Cherry Bomb_76: 1947498786
+      Cherry Bomb_77: -1223312847
+      Cherry Bomb_8: -55860226
+      Cherry Bomb_9: -791792914
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
