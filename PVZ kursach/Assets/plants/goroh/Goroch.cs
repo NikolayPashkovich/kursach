@@ -8,8 +8,13 @@ public class Goroch : Plant
     [SerializeField] Vector3 posToInstance;
     protected override void Action()
     {
-        Instantiate(bullet.gameObject, transform.position + posToInstance, transform.rotation);
-        animator.SetTrigger("Atack");
+        
+        if (isHaveZombieInLine())
+        {
+            Instantiate(bullet.gameObject, transform.position + posToInstance, transform.rotation);
+            animator.SetTrigger("Atack");
+        }
+       
     }
     // Update is called once per frame
     void Update()

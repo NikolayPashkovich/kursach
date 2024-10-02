@@ -1,18 +1,34 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
+    public static GridManager Instance { get; private set; } // Singleton Instance
+
     public int rows = 5; // Количество строк
     public int cols = 9; // Количество колонок
-    public Vector2 cellSize = new Vector2( 1,1); // Размер каждой ячейки
+    public Vector2 cellSize = new Vector2(1, 1); // Размер каждой ячейки
     public Vector3 gridOrigin = Vector3.zero; // Позиция, с которой начинается сетка
-
 
     private Vector3[,] gridPositions; // Массив для хранения позиций ячеек
 
-    void Start()
+    public List<Zombie> zombies = new List<Zombie>();
+    public List<Plant> plants = new List<Plant>();
+
+    private void Awake()
     {
-        CreateGrid(); // Создаем сетку при старте игры
+        // Singleton implementation
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject); // Уничтожаем объект, если он уже существует
+        }
+        else
+        {
+            Instance = this; // Назначаем текущий объект в качестве Instance
+            DontDestroyOnLoad(gameObject); // Не уничтожаем объект при загрузке новой сцены
+        }
+
+        CreateGrid();
     }
 
     void CreateGrid()
@@ -33,7 +49,6 @@ public class GridManager : MonoBehaviour
         }
     }
 
-
     // Метод для получения позиции ячейки
     public Vector3 GetCellPosition(int row, int col)
     {
@@ -47,11 +62,13 @@ public class GridManager : MonoBehaviour
     // Метод для нахождения ближайшей ячейки по позиции мыши
     public Vector2Int GetGridCellFromPosition(Vector2 position)
     {
-
-        position = position - (Vector2)gridOrigin + (cellSize/2);
-        if (position.x < 0 || position.y < 0 || position.x > cols * cellSize.x || position.y > rows*cellSize.y) { return new Vector2Int(-1, -1); }
-        int row = Mathf.Clamp(Mathf.FloorToInt(position.y / cellSize.y), 0, rows );
-        int col = Mathf.Clamp(Mathf.FloorToInt(position.x / cellSize.x), 0, cols );
+        position = position - (Vector2)gridOrigin + (cellSize / 2);
+        if (position.x < 0 || position.y < 0 || position.x > cols * cellSize.x || position.y > rows * cellSize.y)
+        {
+            return new Vector2Int(-1, -1);
+        }
+        int row = Mathf.Clamp(Mathf.FloorToInt(position.y / cellSize.y), 0, rows);
+        int col = Mathf.Clamp(Mathf.FloorToInt(position.x / cellSize.x), 0, cols);
         return new Vector2Int(row, col);
     }
 }
