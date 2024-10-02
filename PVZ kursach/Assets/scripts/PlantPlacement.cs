@@ -11,7 +11,6 @@ public class PlantPlacement : MonoBehaviour
 
     [SerializeField] SpriteRenderer placingPlantImage;
     private Plant PlacingPlant = null;
-    private List<Plant> plants = new List<Plant>();
 
     void Update()
     {
@@ -20,7 +19,7 @@ public class PlantPlacement : MonoBehaviour
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = 0f;
             Vector2Int gridCell = gridManager.GetGridCellFromPosition(mousePosition);
-            Vector3 cellPosition = gridManager.GetCellPosition(gridCell.x, gridCell.y);
+            Vector3 cellPosition = gridManager.GetPositionFromGridCell(gridCell);
             if (gridCell != new Vector2Int(-1,-1))
             {
                 DrawLines(cellPosition);
@@ -54,16 +53,15 @@ public class PlantPlacement : MonoBehaviour
 
     void PlacePlant(Vector2Int gridCell,Vector3 cellPosition)
     {
-        for (int i = 0; i < plants.Count; i++)
+        for (int i = 0; i <GridManager.Instance.plants.Count; i++)
         {
-            if (plants[i].posInGrid == gridCell) { return; }
+            if (GridManager.Instance.plants[i].posInGrid == gridCell) { return; }
         }
 
         GameObject plantObj = Instantiate(PlacingPlant.gameObject, cellPosition, Quaternion.identity);
         Plant plant = plantObj.GetComponent<Plant>();
         plant.posInGrid = gridCell;
-        plants.Add(plant);
-
+        
         PlacingPlant = null;
         placingPlantImage.sprite = null;
 

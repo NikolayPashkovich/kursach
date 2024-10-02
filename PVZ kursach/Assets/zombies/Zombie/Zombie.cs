@@ -10,11 +10,9 @@ public class Zombie : Entity
     [SerializeField] Rigidbody2D rb;
     Vector2 moveDirection;
     Plant targetPlant;
-    private void Awake()
+    public virtual void Awake()
     {
-        GridManager.Instance.zombies.Add(this);
-        hp = maxHP;
-        StartMove();//потом это будет делать спавнер, чтобы отделить зомби которые должны стоять
+        base.Awake();
     }
     public void StartMove()
     {
@@ -23,12 +21,16 @@ public class Zombie : Entity
     }
     private void FixedUpdate()
     {
-        rb.MovePosition((Vector2)transform.position + (moveDirection * speed));
-        if (targetPlant == null && animator.GetInteger("Action") == 2)
+        if (targetPlant == null)
         {
-            animator.SetInteger("Action", 1);
+            rb.MovePosition((Vector2)transform.position + (moveDirection * speed));
+            if (animator.GetInteger("Action") == 2)
+            {
+                animator.SetInteger("Action", 1);
+            }
         }
         posInGrid = GridManager.Instance.GetGridCellFromPosition(transform.position);
+        SelectLayer();
     }
     void Damage(int damage)
     {
@@ -66,6 +68,10 @@ public class Zombie : Entity
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Bullet")
         {

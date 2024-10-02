@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] Vector2 direction;
     [SerializeField] Animator animator;
     [SerializeField] Collider2D collider;
+    [SerializeField] SpriteRenderer spriteRenderer;
     private void Start()
     {
         rb.AddForce(direction * speed);
@@ -26,6 +27,19 @@ public class Bullet : MonoBehaviour
     }
     public void DestroyObj()
     {
+        StartCoroutine(DestroyCorutine());
+    }
+    IEnumerator DestroyCorutine()
+    {
+        float timer = 0;
+        Color normalColor = spriteRenderer.color;
+        Color colorToDestroy = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0);
+        while(timer < 1)
+        {
+            timer += Time.deltaTime * 2;
+            spriteRenderer.color = Color.Lerp(normalColor, colorToDestroy, timer);
+            yield return null;
+        }
         Destroy(gameObject);
     }
 }

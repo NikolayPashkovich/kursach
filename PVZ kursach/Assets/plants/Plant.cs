@@ -6,16 +6,29 @@ public class Plant : Entity
 {
     // Start is called before the first frame update
     [SerializeField] float timeToAction;
-    private void Awake()
+    [SerializeField] protected Vector3 posToInstance;
+    [SerializeField] int sunsCost;
+    public int GetCost() { return sunsCost; }
+    public override void Awake()
     {
-        hp = maxHP;
-        GridManager.Instance.plants.Add(this);
+        base.Awake();
     }
     protected bool isHaveZombieInLine()
     {
         for (int i = 0; i < GridManager.Instance.zombies.Count; i++)
         {
-            if (GridManager.Instance.zombies[i].posInGrid.x == posInGrid.x)
+            if (GridManager.Instance.zombies[i].posInGrid.y == posInGrid.y)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    protected bool isHaveZombieInLineFromFront()
+    {
+        for (int i = 0; i < GridManager.Instance.zombies.Count; i++)
+        {
+            if (GridManager.Instance.zombies[i].posInGrid.y == posInGrid.y && GridManager.Instance.zombies[i].posInGrid.x >= posInGrid.x)
             {
                 return true;
             }

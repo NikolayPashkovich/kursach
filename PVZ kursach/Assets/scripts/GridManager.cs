@@ -10,8 +10,6 @@ public class GridManager : MonoBehaviour
     public Vector2 cellSize = new Vector2(1, 1); // Размер каждой ячейки
     public Vector3 gridOrigin = Vector3.zero; // Позиция, с которой начинается сетка
 
-    private Vector3[,] gridPositions; // Массив для хранения позиций ячеек
-
     public List<Zombie> zombies = new List<Zombie>();
     public List<Plant> plants = new List<Plant>();
 
@@ -25,7 +23,6 @@ public class GridManager : MonoBehaviour
         else
         {
             Instance = this; // Назначаем текущий объект в качестве Instance
-            DontDestroyOnLoad(gameObject); // Не уничтожаем объект при загрузке новой сцены
         }
 
         CreateGrid();
@@ -33,14 +30,13 @@ public class GridManager : MonoBehaviour
 
     void CreateGrid()
     {
-        gridPositions = new Vector3[rows, cols]; // Инициализируем массив
 
         for (int row = 0; row < rows; row++)
         {
             for (int col = 0; col < cols; col++)
             {
                 // Вычисляем позицию каждой ячейки с учетом начальной позиции gridOrigin
-                gridPositions[row, col] = gridOrigin + new Vector3(col * cellSize.x, row * cellSize.y, 0);
+                
 
                 // Для отладки отображаем линии сетки (если нужно)
                 Debug.DrawLine(gridOrigin + new Vector3(col * cellSize.x, 0, 0), gridOrigin + new Vector3(col * cellSize.x, rows * cellSize.x, 0), Color.white, 100f);
@@ -49,16 +45,10 @@ public class GridManager : MonoBehaviour
         }
     }
 
-    // Метод для получения позиции ячейки
-    public Vector3 GetCellPosition(int row, int col)
+    public Vector3 GetPositionFromGridCell(Vector2Int gridCell)
     {
-        if (row >= 0 && row < rows && col >= 0 && col < cols)
-        {
-            return gridPositions[row, col];
-        }
-        return Vector3.zero;
+        return gridOrigin + new Vector3(gridCell.x * cellSize.x, gridCell.y * cellSize.y, 0);
     }
-
     // Метод для нахождения ближайшей ячейки по позиции мыши
     public Vector2Int GetGridCellFromPosition(Vector2 position)
     {
@@ -69,6 +59,6 @@ public class GridManager : MonoBehaviour
         }
         int row = Mathf.Clamp(Mathf.FloorToInt(position.y / cellSize.y), 0, rows);
         int col = Mathf.Clamp(Mathf.FloorToInt(position.x / cellSize.x), 0, cols);
-        return new Vector2Int(row, col);
+        return new Vector2Int(col, row);
     }
 }

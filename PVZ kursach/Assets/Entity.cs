@@ -12,7 +12,38 @@ public class Entity : MonoBehaviour
     protected int hp;
     [SerializeField] protected Color normalColor;
     [SerializeField] protected Color glareColor;
-    [SerializeField] protected float glareSpeed;
+    protected const float glareSpeed = 5;
+    [SerializeField] protected Vector3 positionShift;
+    public Vector3 Position()
+    {
+        return transform.position - positionShift;
+    }
+    protected void SelectLayer()
+    {
+        if (this is Zombie)
+        {
+            spriteRenderer.sortingOrder = GridManager.Instance.rows - GridManager.Instance.GetGridCellFromPosition(Position()).y + 1;
+            return;
+        }
+        spriteRenderer.sortingOrder = GridManager.Instance.rows - GridManager.Instance.GetGridCellFromPosition(Position()).y;
+    }
+    public virtual void Awake()
+    {
+        SelectLayer();
+        transform.position += positionShift;
+        hp = maxHP;
+        Plant plant = this as Plant;
+        if (plant != null) { GridManager.Instance.plants.Add(plant); }
+        Zombie zombie = this as Zombie;
+        if (zombie != null) { GridManager.Instance.zombies.Add(zombie); }
+    }
+    private void OnDestroy()
+    {
+        Plant plant = this as Plant;
+        Zombie zombie = this as Zombie;
+        if (GridManager.Instance.plants.Contains(plant)) { GridManager.Instance.plants.Remove(plant); }
+        if (GridManager.Instance.zombies.Contains(zombie)) { GridManager.Instance.zombies.Remove(zombie); }
+    }
     protected IEnumerator glareCorutine()
     {
         float timer = 0;

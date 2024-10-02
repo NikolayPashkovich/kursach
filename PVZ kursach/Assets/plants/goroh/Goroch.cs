@@ -5,11 +5,10 @@ using UnityEngine;
 public class Goroch : Plant
 {
     [SerializeField] Bullet bullet;
-    [SerializeField] Vector3 posToInstance;
     protected override void Action()
     {
         
-        if (isHaveZombieInLine())
+        if (isHaveZombieInLineFromFront())
         {
             Instantiate(bullet.gameObject, transform.position + posToInstance, transform.rotation);
             animator.SetTrigger("Atack");
