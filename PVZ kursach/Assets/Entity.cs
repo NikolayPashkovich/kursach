@@ -14,6 +14,20 @@ public class Entity : MonoBehaviour
     [SerializeField] protected Color glareColor;
     protected const float glareSpeed = 5;
     [SerializeField] protected Vector3 positionShift;
+    public Vector3 GetPosShift()
+    {
+        return positionShift;
+    }
+    public virtual void Damage(int damage)
+    {
+        hp -= damage;
+        StartCoroutine(glareCorutine());
+        if (hp <= 0)
+        {
+            StopAllCoroutines();
+            Destroy(gameObject);
+        }
+    }
     public Vector3 Position()
     {
         return transform.position - positionShift;

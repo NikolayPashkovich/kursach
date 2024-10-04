@@ -46,7 +46,7 @@ public class Sun : MonoBehaviour
         targetPos = Camera.main.ScreenToWorldPoint(new Vector3(0,Camera.main.pixelHeight));
         Vector3 startPos = transform.position;
         float timer = 0;
-        float timeLength = alphaAnimTime * 4;
+        float timeLength = alphaAnimTime * 2;
         while(timer < timeLength)
         {
             timer += Time.deltaTime;

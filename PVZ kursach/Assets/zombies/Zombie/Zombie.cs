@@ -32,7 +32,7 @@ public class Zombie : Entity
         posInGrid = GridManager.Instance.GetGridCellFromPosition(transform.position);
         SelectLayer();
     }
-    void Damage(int damage)
+    public override void Damage(int damage)
     {
         hp -= damage;
         StartCoroutine(glareCorutine());
@@ -47,7 +47,18 @@ public class Zombie : Entity
         }
 
     }
-   
+    public  void FireDeath()
+    {
+        speed = 0;
+        //отключаю все слои аниматора кроме 0-го чтобы все возможные отваливающиеся части зомби не вылетали при анимации сгорания
+        for (int i = 1; i < animator.layerCount; i++)
+        {
+            animator.SetLayerWeight(i, 0);
+        }
+        animator.SetBool("isHaveHand", false);
+        animator.SetBool("isHaveHead", false);
+        animator.SetTrigger("fireDeath");
+    }
     public void Eat()
     {
         if (targetPlant == null) { return; }
@@ -79,7 +90,11 @@ public class Zombie : Entity
             Damage(bullet.GetDamage());
             bullet.Hit();
         }
-        if (collision.gameObject.tag == "Plant")
+        
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (targetPlant == null && collision.gameObject.tag == "Plant")
         {
             Plant plant = collision.gameObject.GetComponent<Plant>();
             animator.SetInteger("Action", 2);

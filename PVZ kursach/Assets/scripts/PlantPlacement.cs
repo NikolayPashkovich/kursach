@@ -10,6 +10,7 @@ public class PlantPlacement : MonoBehaviour
     public LineRenderer verticalLine;    // Линия для вертикальной полосы
 
     [SerializeField] SpriteRenderer placingPlantImage;
+    Vector3 placingPlantShift;
     private Plant PlacingPlant = null;
 
     void Update()
@@ -23,7 +24,7 @@ public class PlantPlacement : MonoBehaviour
             if (gridCell != new Vector2Int(-1,-1))
             {
                 DrawLines(cellPosition);
-                placingPlantImage.transform.position = cellPosition;
+                placingPlantImage.transform.position = cellPosition + placingPlantShift;
                 if (Input.GetMouseButtonDown(0))
                 {
                     PlacePlant(gridCell,cellPosition);
@@ -37,6 +38,8 @@ public class PlantPlacement : MonoBehaviour
         PlacingPlant = prefab;
         placingPlantImage.sprite = PlacingPlant.spriteRenderer.sprite;
         placingPlantImage.transform.localScale = PlacingPlant.transform.localScale;
+        placingPlantShift = prefab.GetPosShift();
+        placingPlantImage.transform.position = new Vector3(100, 100);
     }
     void DrawLines(Vector3 cellPosition)
     {

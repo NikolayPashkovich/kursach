@@ -125,7 +125,7 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 0.5882353}
   hideColor: {r: 1, g: 1, b: 1, a: 0}
   speed: 0.1
-  alphaAnimTime: 0.5
+  alphaAnimTime: 0.25
   liveTime: 15
   collider: {fileID: 5225512418198968634}
 --- !u!61 &5225512418198968634

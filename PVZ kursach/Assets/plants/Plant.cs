@@ -45,16 +45,7 @@ public class Plant : Entity
         Action();
         StartCoroutine(waitForAction());
     }
-    public void Damage(int damage)
-    {
-        hp -= damage;
-        StartCoroutine(glareCorutine());
-        if (hp <= 0)
-        {
-            StopAllCoroutines();
-            Destroy(gameObject);
-        }
-    }
+    
     protected virtual void Action()
     {
 
