@@ -14,6 +14,11 @@ public class EconomicController : MonoBehaviour
     [SerializeField] float timeToSpawnSun;
     [SerializeField] Sun sunPrefab;
     float sunsTimer =0;
+
+    bool isGameStarted = false;
+    [SerializeField] MainCamScript mainCam;
+    [SerializeField] ZombieSpawner zombieSpawner;
+    [SerializeField] PlantPlacement plantPlacement;
     private void Awake()
     {
         if (instance != null && instance != this) { Destroy(gameObject); }
@@ -22,8 +27,18 @@ public class EconomicController : MonoBehaviour
             instance = this;
         }
         UpdateUI();
+
+        zombieSpawner.enabled = false;
+        plantPlacement.enabled = false;
+        mainCam.GoToSelect();
     }
-    
+    public void EndSelect()
+    {
+        zombieSpawner.enabled = true;
+        plantPlacement.enabled = true;
+        mainCam.GoToGame();
+        isGameStarted = true;
+    }
     public void AddSuns(int plusSuns)
     {
         Suns += plusSuns;
@@ -52,11 +67,14 @@ public class EconomicController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        sunsTimer += Time.fixedDeltaTime;
-        if (sunsTimer >= timeToSpawnSun)
+        if (isGameStarted)
         {
-            sunsTimer = 0;
-            SpawnSun();
+            sunsTimer += Time.fixedDeltaTime;
+            if (sunsTimer >= timeToSpawnSun)
+            {
+                sunsTimer = 0;
+                SpawnSun();
+            }
         }
     }
     void SpawnSun()

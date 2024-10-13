@@ -25,13 +25,26 @@ public class PlantPlacement : MonoBehaviour
             {
                 DrawLines(cellPosition);
                 placingPlantImage.transform.position = cellPosition + placingPlantShift;
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonUp(0))
                 {
                     PlacePlant(gridCell,cellPosition);
+                }
+                if (Input.GetMouseButtonUp(1))
+                {
+                    CancelPlacing();
                 }
             }
 
         }
+    }
+    void CancelPlacing()
+    {
+        PlacingPlant = null;
+        placingPlantImage.sprite = null;
+        horizontalLine.SetPosition(0, Vector3.zero);
+        horizontalLine.SetPosition(1, Vector3.zero);
+        verticalLine.SetPosition(0, Vector3.zero);
+        verticalLine.SetPosition(1, Vector3.zero);
     }
     public void SelectPlacingPlant(Plant prefab)
     {

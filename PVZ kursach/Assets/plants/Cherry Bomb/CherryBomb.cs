@@ -16,8 +16,5 @@ public class CherryBomb : Plant
             }
         }
     }
-    public void DestroyGameObj()
-    {
-        Destroy(gameObject);
-    }
+   
 }

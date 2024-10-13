@@ -64,10 +64,7 @@ public class Zombie : Entity
         if (targetPlant == null) { return; }
         targetPlant.Damage(damage);
     }
-    public void Destroying()
-    {
-        Destroy(gameObject);
-    }
+   
     void Dead()
     {
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
@@ -77,10 +74,6 @@ public class Zombie : Entity
     void Start()
     {
 
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

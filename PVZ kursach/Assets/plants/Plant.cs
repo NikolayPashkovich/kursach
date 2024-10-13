@@ -9,9 +9,9 @@ public class Plant : Entity
     [SerializeField] protected Vector3 posToInstance;
     [SerializeField] int sunsCost;
     public int GetCost() { return sunsCost; }
-    public override void Awake()
+    public virtual void Start()
     {
-        base.Awake();
+        StartCoroutine(waitForAction());
     }
     protected bool isHaveZombieInLine()
     {
@@ -35,10 +35,7 @@ public class Plant : Entity
         }
         return false;
     }
-    void Start()
-    {
-        StartCoroutine(waitForAction());
-    }
+    
     IEnumerator waitForAction()
     {
         yield return new WaitForSeconds(timeToAction);
@@ -51,8 +48,5 @@ public class Plant : Entity
 
     }
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
