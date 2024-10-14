@@ -131,6 +131,7 @@ MonoBehaviour:
   timeToAction: 1.425
   posToInstance: {x: 0.2875, y: 0.475, z: 0}
   sunsCost: 100
+  timeToRecharge: 10
   bullet: {fileID: 960090302330649307, guid: 9a723abd8984dd343b71fe7ee8e25126, type: 3}
 --- !u!61 &2471854010248135507
 BoxCollider2D:

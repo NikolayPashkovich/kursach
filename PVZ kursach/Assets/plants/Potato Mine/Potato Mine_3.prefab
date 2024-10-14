@@ -131,6 +131,7 @@ MonoBehaviour:
   timeToAction: 15
   posToInstance: {x: 0, y: 0, z: 0}
   sunsCost: 25
+  timeToRecharge: 30
   boomDamage: 1800
 --- !u!61 &2581419267153591874
 BoxCollider2D:

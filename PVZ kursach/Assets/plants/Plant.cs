@@ -8,6 +8,8 @@ public class Plant : Entity
     [SerializeField] float timeToAction;
     [SerializeField] protected Vector3 posToInstance;
     [SerializeField] int sunsCost;
+    [SerializeField] float timeToRecharge;
+    public float GetTimeToRecharge() { return timeToRecharge; }
     public int GetCost() { return sunsCost; }
     public virtual void Start()
     {

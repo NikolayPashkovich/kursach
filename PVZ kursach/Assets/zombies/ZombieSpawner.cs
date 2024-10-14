@@ -18,6 +18,13 @@ public class ZombieSpawner : MonoBehaviour
     {
         zombieInLInesQuntity = new int[GridManager.Instance.rows];
     }
+    public void GoToGame()
+    {
+        for (int i = 0; i < GridManager.Instance.zombies.Count; i++)
+        {
+            Destroy(GridManager.Instance.zombies[i].gameObject);
+        }
+    }
     private void FixedUpdate()
     {
         timer += Time.fixedDeltaTime;
@@ -31,6 +38,17 @@ public class ZombieSpawner : MonoBehaviour
             waveIndex+=1;
         }
     }
+    public void SpawnZombiesForStart()
+    {
+        zombieInLInesQuntity = new int[GridManager.Instance.rows];
+        for (int i = 0; i < zombieQuantity.Length; i++)
+        {
+            for (int j = 0; j < zombieQuantity[i]; j++)
+            {
+                SpawnZombie(i);
+            }
+        }
+    }
     void SpawnWave(int index)
     {
         int points = wavesPoints[index];
@@ -38,13 +56,17 @@ public class ZombieSpawner : MonoBehaviour
         {
             int zombieIndex = SelectRandomZombie(points);
             points -= zombieCost[zombieIndex];
-            Vector2Int gridCell = new Vector2Int(GridManager.Instance.cols - 1, RandomSelector.GetRandomIndexInverseWeigths(zombieInLInesQuntity));
-            Vector3 zombiePos = GridManager.Instance.GetPositionFromGridCell(gridCell) 
-                + new Vector3(Random.Range(GridManager.Instance.cellSize.x, GridManager.Instance.cellSize.x*2), 0, 0);
-            //Vector3 zombiePos = GridManager.Instance.GetCellPosition(Random.Range(0, GridManager.Instance.rows), GridManager.Instance.cols-1) + new Vector3(-GridManager.Instance.cellSize.x, 0,0);
-            GameObject zombObj = Instantiate(zombiePrefabs[zombieIndex].gameObject, zombiePos, Quaternion.Euler(0, 0, 0));
+            GameObject zombObj = SpawnZombie(zombieIndex);
             zombObj.GetComponent<Zombie>().StartMove();
         }
+    }
+    GameObject SpawnZombie(int zombieIndex)
+    {
+        Vector2Int gridCell = new Vector2Int(GridManager.Instance.cols - 1, RandomSelector.GetRandomIndexInverseWeigths(zombieInLInesQuntity,3));
+        Vector3 zombiePos = GridManager.Instance.GetPositionFromGridCell(gridCell)
+            + new Vector3(Random.Range(GridManager.Instance.cellSize.x, GridManager.Instance.cellSize.x * 4), 0, 0);
+        //Vector3 zombiePos = GridManager.Instance.GetCellPosition(Random.Range(0, GridManager.Instance.rows), GridManager.Instance.cols-1) + new Vector3(-GridManager.Instance.cellSize.x, 0,0);
+         return Instantiate(zombiePrefabs[zombieIndex].gameObject, zombiePos, Quaternion.Euler(0, 0, 0));
     }
     int SelectRandomZombie(int points)
     {

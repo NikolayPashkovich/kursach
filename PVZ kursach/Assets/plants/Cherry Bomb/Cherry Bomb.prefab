@@ -157,3 +157,4 @@ MonoBehaviour:
   timeToAction: 0
   posToInstance: {x: 0, y: 0, z: 0}
   sunsCost: 150
+  timeToRecharge: 50

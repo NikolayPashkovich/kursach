@@ -1,15 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class EconomicController : MonoBehaviour
 {
     // Start is called before the first frame update
     public static EconomicController instance { get; private set; }
-    int Suns;
-    [SerializeField] Text sunsQuantityText;
-    Coroutine changeTextCorutine;
+    public int Suns { get; private set; }
+    
 
     [SerializeField] float timeToSpawnSun;
     [SerializeField] Sun sunPrefab;
@@ -19,6 +17,14 @@ public class EconomicController : MonoBehaviour
     [SerializeField] MainCamScript mainCam;
     [SerializeField] ZombieSpawner zombieSpawner;
     [SerializeField] PlantPlacement plantPlacement;
+    [SerializeField] UIController uiController;
+    public int maxPlants;
+    public void TrySelectPlant(SelectButton selectButton)
+    {
+        if (selectButton.plant.GetCost() > Suns) { return; }
+        //RemoveSuns(plant.GetCost());
+        plantPlacement.SelectPlacingPlant(selectButton);
+    }
     private void Awake()
     {
         if (instance != null && instance != this) { Destroy(gameObject); }
@@ -26,44 +32,34 @@ public class EconomicController : MonoBehaviour
         {
             instance = this;
         }
-        UpdateUI();
-
+        uiController.UpdateUI();
+        Suns = 50;
         zombieSpawner.enabled = false;
         plantPlacement.enabled = false;
+       
+    }
+    private void Start()
+    {
         mainCam.GoToSelect();
-    }
-    public void EndSelect()
-    {
+        uiController.SetActiveSelect(true);
         zombieSpawner.enabled = true;
-        plantPlacement.enabled = true;
-        mainCam.GoToGame();
+        zombieSpawner.SpawnZombiesForStart();
+        zombieSpawner.enabled = false;
+    }
+    public void GoToGame()
+    {
+        if (isGameStarted) { return; }
+        StartCoroutine(GoToGameCorutine());
+    }
+    public IEnumerator GoToGameCorutine()
+    {
         isGameStarted = true;
-    }
-    public void AddSuns(int plusSuns)
-    {
-        Suns += plusSuns;
-        UpdateUI();
-    }
-    public void RemoveSuns(int minusSuns)
-    {
-        Suns -= minusSuns;
-        UpdateUI();
-    }
-    void UpdateUI()
-    {
-        if (changeTextCorutine == null) { changeTextCorutine = StartCoroutine(ChangeText()); }
-    }
-    IEnumerator ChangeText()
-    {
-        int textSuns = int.Parse(sunsQuantityText.text);
-        while(textSuns != Suns)
-        {
-            if (textSuns < Suns) { textSuns++; }
-            if (textSuns > Suns) { textSuns--; }
-            sunsQuantityText.text = textSuns.ToString();
-            yield return null;
-        }
-        changeTextCorutine = null;
+        uiController.GoToGame();
+        uiController.UpdateUI();
+        yield return StartCoroutine( mainCam.GoToGame());
+        zombieSpawner.enabled = true;
+        zombieSpawner.GoToGame();
+        plantPlacement.enabled = true;
     }
     private void FixedUpdate()
     {
@@ -77,6 +73,24 @@ public class EconomicController : MonoBehaviour
             }
         }
     }
+    public void EndSelect()
+    {
+        zombieSpawner.enabled = true;
+        plantPlacement.enabled = true;
+        mainCam.GoToGame();
+        isGameStarted = true;
+    }
+    public void AddSuns(int plusSuns)
+    {
+        Suns += plusSuns;
+        uiController.UpdateUI();
+    }
+    public void RemoveSuns(int minusSuns)
+    {
+        Suns -= minusSuns;
+        uiController.UpdateUI();
+    }
+    
     void SpawnSun()
     {
         Vector3 target = GridManager.Instance.GetPositionFromGridCell(new Vector2Int(Random.Range(0, GridManager.Instance.cols), Random.Range(0, GridManager.Instance.rows)));

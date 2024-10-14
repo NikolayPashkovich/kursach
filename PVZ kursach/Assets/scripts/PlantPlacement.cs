@@ -11,11 +11,11 @@ public class PlantPlacement : MonoBehaviour
 
     [SerializeField] SpriteRenderer placingPlantImage;
     Vector3 placingPlantShift;
-    private Plant PlacingPlant = null;
+    private SelectButton selectButton = null;
 
     void Update()
     {
-        if (PlacingPlant != null)
+        if (selectButton != null)
         {
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = 0f;
@@ -39,19 +39,22 @@ public class PlantPlacement : MonoBehaviour
     }
     void CancelPlacing()
     {
-        PlacingPlant = null;
+
+        UIController.DeselectButton();
+        selectButton = null;
         placingPlantImage.sprite = null;
         horizontalLine.SetPosition(0, Vector3.zero);
         horizontalLine.SetPosition(1, Vector3.zero);
         verticalLine.SetPosition(0, Vector3.zero);
         verticalLine.SetPosition(1, Vector3.zero);
     }
-    public void SelectPlacingPlant(Plant prefab)
+    public void SelectPlacingPlant(SelectButton selectButton)
     {
-        PlacingPlant = prefab;
-        placingPlantImage.sprite = PlacingPlant.spriteRenderer.sprite;
-        placingPlantImage.transform.localScale = PlacingPlant.transform.localScale;
-        placingPlantShift = prefab.GetPosShift();
+        this.selectButton = selectButton;
+        selectButton.Select();
+        placingPlantImage.sprite = selectButton.plant.spriteRenderer.sprite;
+        placingPlantImage.transform.localScale = selectButton.plant.transform.localScale;
+        placingPlantShift = selectButton.plant.GetPosShift();
         placingPlantImage.transform.position = new Vector3(100, 100);
     }
     void DrawLines(Vector3 cellPosition)
@@ -73,12 +76,14 @@ public class PlantPlacement : MonoBehaviour
         {
             if (GridManager.Instance.plants[i].posInGrid == gridCell) { return; }
         }
+        EconomicController.instance.RemoveSuns(selectButton.plant.GetCost());
+        selectButton.ResetTimer();
 
-        GameObject plantObj = Instantiate(PlacingPlant.gameObject, cellPosition, Quaternion.identity);
+        GameObject plantObj = Instantiate(selectButton.plant.gameObject, cellPosition, Quaternion.identity);
         Plant plant = plantObj.GetComponent<Plant>();
         plant.posInGrid = gridCell;
-        
-        PlacingPlant = null;
+        UIController.DeselectButton();
+        selectButton = null;
         placingPlantImage.sprite = null;
 
         horizontalLine.SetPosition(0, Vector3.zero);

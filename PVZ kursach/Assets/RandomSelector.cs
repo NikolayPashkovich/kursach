@@ -29,13 +29,13 @@ public static class RandomSelector
         // Если по какой-то причине не сработало (например, округление), возвращаем последний объект
         return objects[objects.Count - 1];
     }
-    public static int GetRandomIndexInverseWeigths(int[] weights)
+    public static int GetRandomIndexInverseWeigths(int[] weights, float mul)
     {
         // Сначала мы находим общий вес, который будет суммой обратных значений весов
         float totalInverseWeight = 0f;
         for (int i = 0; i < weights.Length; i++)
         {
-            totalInverseWeight += invetseWeigth(weights[i]);
+            totalInverseWeight += invetseWeigth(weights[i] * mul);
         }
 
         // Генерируем случайное число от 0 до суммы обратных весов
@@ -45,7 +45,7 @@ public static class RandomSelector
         float cumulativeWeight = 0f;
         for (int i = 0; i < weights.Length; i++)
         {
-            cumulativeWeight += invetseWeigth(weights[i]);
+            cumulativeWeight += invetseWeigth(weights[i] * mul);
             if (randomValue < cumulativeWeight)
             {
                 return i;

@@ -216,8 +216,9 @@ MonoBehaviour:
   timeToAction: 24
   posToInstance: {x: 0, y: 0.135, z: -5}
   sunsCost: 50
+  timeToRecharge: 10
   lightRenderer: {fileID: 7507063678137601329}
-  timeToChangeLight: 1
+  timeToChangeLight: 0.25
   withoutLightColor: {r: 1, g: 1, b: 1, a: 0}
   withLightColor: {r: 1, g: 1, b: 1, a: 0.5882353}
   sunPrefab: {fileID: 4425385582571888486, guid: 81882a2ef5f107343b493c3e27397216, type: 3}
