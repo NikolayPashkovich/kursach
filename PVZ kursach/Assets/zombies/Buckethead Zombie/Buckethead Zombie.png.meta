@@ -1,0 +1,1577 @@
+fileFormatVersion: 2
+guid: e3a023c6d5a65b544ac0e81143656714
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Buckethead Zombie_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 613
+        width: 30
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5341353, y: 0.48931396}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84a5c2f2f792584cbc1dac788f97a24
+      internalID: 2132665642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 613
+        width: 30
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5252304, y: 0.45547608}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ee0fc056bc314b4aa4a30743929ae74
+      internalID: 80429049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_2
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 613
+        width: 30
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5603439, y: 0.45890015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489d233f7312dd345b9369d91c134dcd
+      internalID: -1709371989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_3
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 613
+        width: 30
+        height: 50
+      alignment: 9
+      pivot: {x: 0.54077303, y: 0.45792237}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac58904a10e3274589e17c0647d6adf
+      internalID: -1166947033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_4
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 613
+        width: 30
+        height: 50
+      alignment: 9
+      pivot: {x: 0.53588, y: 0.4755359}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89f3c9d5c7003942a588529b4a68038
+      internalID: 1735611051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_5
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 643
+        width: 24
+        height: 22
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8febce2316e2e74cbeb89ee3cf85521
+      internalID: 796129712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_6
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 643
+        width: 24
+        height: 22
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb51fd4d41965194f80feca9ab29b153
+      internalID: -2017916710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_7
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 625
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 745f8febb8dee9c46958ac1d7ac8eddc
+      internalID: -1979046999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_8
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 618
+        width: 23
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 879da3132967cb64ea8c802ea58044a5
+      internalID: 503085542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_9
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 617
+        width: 23
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aa9b124b5df52d4b914ece463186fbc
+      internalID: -7840030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_10
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 622
+        width: 22
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bb1d6e1a5030c240b746f36946f1697
+      internalID: -1171863061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_11
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 547
+        width: 29
+        height: 51
+      alignment: 9
+      pivot: {x: 0.54313344, y: 0.4777018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 324c3e8fa4cc7ea4f9fc8a9c8c4e83a7
+      internalID: 2147067894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_12
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 547
+        width: 29
+        height: 51
+      alignment: 9
+      pivot: {x: 0.3797481, y: 0.46804032}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84cbb619814ef8e4a9333369faff7879
+      internalID: 601459661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_13
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 547
+        width: 29
+        height: 51
+      alignment: 9
+      pivot: {x: 0.38078308, y: 0.44854498}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb5a6ee90b6fb6a4398692be392444fe
+      internalID: -99031238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_14
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 547
+        width: 29
+        height: 51
+      alignment: 9
+      pivot: {x: 0.5947997, y: 0.4575303}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab9ee96c96d5c346aeef7418740c9dc
+      internalID: 1712198301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_15
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 547
+        width: 29
+        height: 51
+      alignment: 9
+      pivot: {x: 0.37934718, y: 0.4844827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1681a1b154c52d94083b1ff2de7b98aa
+      internalID: 2017265157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_16
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 547
+        width: 32
+        height: 51
+      alignment: 9
+      pivot: {x: 0.49609566, y: 0.47876576}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c79e368044cd64a9e5d3d4e16eb219
+      internalID: -897871164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_17
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 547
+        width: 31
+        height: 51
+      alignment: 9
+      pivot: {x: 0.5201554, y: 0.47468117}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f21613c117ad0b49928b2570a1e9a63
+      internalID: 1705872488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_18
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 482
+        width: 31
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.46469483}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bdfe0792e2f2cf42bab25bc5da5b8ea
+      internalID: 116828135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_19
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 482
+        width: 32
+        height: 50
+      alignment: 9
+      pivot: {x: 0.51539516, y: 0.44581115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6c511a290eab8e4caa9c8df6dc4ca16
+      internalID: -828167835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_20
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 482
+        width: 31
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5344317, y: 0.44006348}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8ec13b756ae5b439d43672025529a2
+      internalID: -1797754808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_21
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 482
+        width: 31
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5648902, y: 0.43924254}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09403f7a7b18908498fc42f28fcee695
+      internalID: 1207815154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_22
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 482
+        width: 31
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5317836, y: 0.42692688}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55264c1d23198b546bdee8fbd7feb634
+      internalID: -152608768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_23
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 482
+        width: 30
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5615799, y: 0.4211792}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b1e6707f598d6a4d844dbc2a7840264
+      internalID: -2110700389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_24
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 482
+        width: 31
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5662153, y: 0.42774782}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34497d45d5fc8f047983b57ac735f7b2
+      internalID: -840700835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_25
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 416
+        width: 32
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5287493, y: 0.45531616}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1d6eddc74020649938411770965fe1
+      internalID: 596767721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_26
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 416
+        width: 32
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5328562, y: 0.4671442}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9248e8c730718764b9fe6dce7f12ef0e
+      internalID: 1891884854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_27
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 416
+        width: 32
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5328562, y: 0.4671442}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a745aeb81e0594989825556053cf3d
+      internalID: 1740051357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_28
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 416
+        width: 32
+        height: 50
+      alignment: 9
+      pivot: {x: 0.54005814, y: 0.44689393}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0234abc604aba4b47a24fe9362f8b15d
+      internalID: 487461053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_29
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 342
+        width: 30
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5662487, y: 0.47873962}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04484f9da364664f8bb413a415cf39c
+      internalID: -147382677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_30
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 342
+        width: 24
+        height: 50
+      alignment: 9
+      pivot: {x: 0.45955816, y: 0.46764648}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44599277f1e9c0449a297bdd0122a2c6
+      internalID: 264288670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_31
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 342
+        width: 24
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4595585, y: 0.4556673}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bab0e6817b88e4429dca1e30e183226
+      internalID: -1292884109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_32
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 342
+        width: 30
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5970622, y: 0.45285645}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa741d0211e96e44afb4d9ce337cf4a
+      internalID: -898660415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_33
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 342
+        width: 24
+        height: 51
+      alignment: 9
+      pivot: {x: 0.45763206, y: 0.4791565}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c50e390a8f773174faec13f172832079
+      internalID: 1620859208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_34
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 342
+        width: 33
+        height: 51
+      alignment: 9
+      pivot: {x: 0.5168078, y: 0.44924927}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09480664f228b2c469bd75df11c4588e
+      internalID: -2085682512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_35
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 342
+        width: 32
+        height: 50
+      alignment: 9
+      pivot: {x: 0.52833176, y: 0.4584015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c514a7345836125448d0629b2e233888
+      internalID: 859594431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_36
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 277
+        width: 32
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5094452, y: 0.46146363}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dcaa87f1a75b094f98bde5cbb06b656
+      internalID: 186699113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_37
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 277
+        width: 33
+        height: 49
+      alignment: 9
+      pivot: {x: 0.53091174, y: 0.45990613}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce26ab7b5acd29749ade1195fdba0e38
+      internalID: -1468353181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_38
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 277
+        width: 32
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5484071, y: 0.4483406}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a4c391f4ff6d541895acee79660367
+      internalID: 556763899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_39
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 277
+        width: 31
+        height: 50
+      alignment: 9
+      pivot: {x: 0.55849975, y: 0.41763732}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e7189497d4aa0f41ad8451e9062a979
+      internalID: 381868406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_40
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 277
+        width: 32
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5484071, y: 0.43677506}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 511cc8421d317994e9dcf238e9847c4e
+      internalID: -40581928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_41
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 277
+        width: 31
+        height: 49
+      alignment: 9
+      pivot: {x: 0.57068706, y: 0.43754548}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e8373f39eb8bf4795736346151e4ec
+      internalID: 1980319017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_42
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 277
+        width: 31
+        height: 50
+      alignment: 9
+      pivot: {x: 0.54753065, y: 0.43879455}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0351d11fa68c5344ebd9ac798512d031
+      internalID: -1611225436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_43
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 211
+        width: 33
+        height: 49
+      alignment: 9
+      pivot: {x: 0.54693973, y: 0.43754578}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4980a72d9cb76bf44ac8f54f992bb28d
+      internalID: 697667696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_44
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 211
+        width: 33
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5412156, y: 0.44861785}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d4d0d6d4f40a6140a8943863d3628cb
+      internalID: 619024969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_45
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 211
+        width: 33
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5423607, y: 0.47808716}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c3f5f171aa60bd4395b78d75f052de7
+      internalID: -1359587643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_46
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 211
+        width: 33
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5480851, y: 0.44679853}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9da7a6f81256cbb48b0d86a65caef755
+      internalID: 966142009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_47
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 137
+        width: 27
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5130002, y: 0.4904883}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45a9a670d5b29e4794e1e746eba9884
+      internalID: 1022382150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_48
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 137
+        width: 24
+        height: 51
+      alignment: 9
+      pivot: {x: 0.45463213, y: 0.4803757}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ca65a93c2f7a90478a7ed72139c8538
+      internalID: 561480642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_49
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 137
+        width: 24
+        height: 50
+      alignment: 9
+      pivot: {x: 0.46152815, y: 0.47045287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a28bf8f7ab4834298606eecd6c2ebe
+      internalID: -888789773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_50
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 137
+        width: 27
+        height: 50
+      alignment: 9
+      pivot: {x: 0.56155676, y: 0.48891968}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d6bc69e01a0d28448cf4ffb3ad503af
+      internalID: -473869846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_51
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 137
+        width: 24
+        height: 52
+      alignment: 9
+      pivot: {x: 0.4612522, y: 0.49105805}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2834b22cda6e34a4ba2991e4942c86c8
+      internalID: 95177257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_52
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 137
+        width: 30
+        height: 51
+      alignment: 9
+      pivot: {x: 0.4619568, y: 0.46435967}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3473044730f4ad44cba7c5ae9ecf175c
+      internalID: -146275615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_53
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 137
+        width: 29
+        height: 50
+      alignment: 9
+      pivot: {x: 0.47757378, y: 0.49070892}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab555722e1977a2479492b99c112dcdc
+      internalID: 1516464755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_54
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 72
+        width: 31
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 868a46cc599b5b24d8b56250dfe7244f
+      internalID: -843524263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_55
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 72
+        width: 30
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4891426, y: 0.49620196}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 106371ce964a4da42912560635251d49
+      internalID: -1672535011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_56
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 72
+        width: 30
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5080645, y: 0.49691352}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38480479161e5c54aad538871666b528
+      internalID: 1342645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_57
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 72
+        width: 31
+        height: 50
+      alignment: 9
+      pivot: {x: 0.53902215, y: 0.46431336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89eb7d26c60ede945a1980ee9f59001e
+      internalID: 1951272852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_58
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 72
+        width: 29
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca0a9c30bafea1b4ea2564cb8f4e402c
+      internalID: 2096128313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_59
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 72
+        width: 28
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5015673, y: 0.48925206}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc17f7c11bab8994587b3450f805fb2b
+      internalID: 530591507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_60
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 72
+        width: 31
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5207825, y: 0.45893067}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4485ed18969a04bb8d78d0b502d03f
+      internalID: 845851330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_61
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 6
+        width: 30
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4974205, y: 0.4599869}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9933e682d266cbd4b938a7c86449c7ca
+      internalID: 2135616369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_62
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 6
+        width: 30
+        height: 50
+      alignment: 9
+      pivot: {x: 0.49862212, y: 0.47436896}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f08403468c42aea40a243c5e23a8a9b6
+      internalID: 205235921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_63
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 6
+        width: 30
+        height: 50
+      alignment: 9
+      pivot: {x: 0.50000024, y: 0.4809829}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b38d57081bea372459c62969caa034d2
+      internalID: 868667051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buckethead Zombie_64
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 6
+        width: 30
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5041346, y: 0.4696278}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8589dbe6ab75a468033adbcddd244c
+      internalID: -1199412554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Buckethead Zombie_0: 2132665642
+      Buckethead Zombie_1: 80429049
+      Buckethead Zombie_10: -1171863061
+      Buckethead Zombie_11: 2147067894
+      Buckethead Zombie_12: 601459661
+      Buckethead Zombie_13: -99031238
+      Buckethead Zombie_14: 1712198301
+      Buckethead Zombie_15: 2017265157
+      Buckethead Zombie_16: -897871164
+      Buckethead Zombie_17: 1705872488
+      Buckethead Zombie_18: 116828135
+      Buckethead Zombie_19: -828167835
+      Buckethead Zombie_2: -1709371989
+      Buckethead Zombie_20: -1797754808
+      Buckethead Zombie_21: 1207815154
+      Buckethead Zombie_22: -152608768
+      Buckethead Zombie_23: -2110700389
+      Buckethead Zombie_24: -840700835
+      Buckethead Zombie_25: 596767721
+      Buckethead Zombie_26: 1891884854
+      Buckethead Zombie_27: 1740051357
+      Buckethead Zombie_28: 487461053
+      Buckethead Zombie_29: -147382677
+      Buckethead Zombie_3: -1166947033
+      Buckethead Zombie_30: 264288670
+      Buckethead Zombie_31: -1292884109
+      Buckethead Zombie_32: -898660415
+      Buckethead Zombie_33: 1620859208
+      Buckethead Zombie_34: -2085682512
+      Buckethead Zombie_35: 859594431
+      Buckethead Zombie_36: 186699113
+      Buckethead Zombie_37: -1468353181
+      Buckethead Zombie_38: 556763899
+      Buckethead Zombie_39: 381868406
+      Buckethead Zombie_4: 1735611051
+      Buckethead Zombie_40: -40581928
+      Buckethead Zombie_41: 1980319017
+      Buckethead Zombie_42: -1611225436
+      Buckethead Zombie_43: 697667696
+      Buckethead Zombie_44: 619024969
+      Buckethead Zombie_45: -1359587643
+      Buckethead Zombie_46: 966142009
+      Buckethead Zombie_47: 1022382150
+      Buckethead Zombie_48: 561480642
+      Buckethead Zombie_49: -888789773
+      Buckethead Zombie_5: 796129712
+      Buckethead Zombie_50: -473869846
+      Buckethead Zombie_51: 95177257
+      Buckethead Zombie_52: -146275615
+      Buckethead Zombie_53: 1516464755
+      Buckethead Zombie_54: -843524263
+      Buckethead Zombie_55: -1672535011
+      Buckethead Zombie_56: 1342645
+      Buckethead Zombie_57: 1951272852
+      Buckethead Zombie_58: 2096128313
+      Buckethead Zombie_59: 530591507
+      Buckethead Zombie_6: -2017916710
+      Buckethead Zombie_60: 845851330
+      Buckethead Zombie_61: 2135616369
+      Buckethead Zombie_62: 205235921
+      Buckethead Zombie_63: 868667051
+      Buckethead Zombie_64: -1199412554
+      Buckethead Zombie_7: -1979046999
+      Buckethead Zombie_8: 503085542
+      Buckethead Zombie_9: -7840030
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
