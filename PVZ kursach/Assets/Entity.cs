@@ -53,7 +53,7 @@ public class Entity : MonoBehaviour
     {
         return transform.position - positionShift;
     }
-    protected void SelectLayer()
+    protected virtual void SelectLayer()
     {
         if (this is Zombie)
         {

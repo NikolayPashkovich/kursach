@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2710,10 +2711,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombiePrefabs:
-  - {fileID: 3776324828704864794, guid: e628e6d3d6234cb4dbc161a01fdfe597, type: 3}
-  zombieCost: 01000000
-  zombieQuantity: 0a000000
-  wavesPoints: 01000000010000000200000001000000050000000100000002000000020000000100000006000000
+  - {fileID: 3466251022612008718, guid: e628e6d3d6234cb4dbc161a01fdfe597, type: 3}
+  - {fileID: 4435027287376199507, guid: 8835d73cd6d3dd741b7a952a936e1d48, type: 3}
+  - {fileID: 4435027287376199507, guid: 9895ebbc9b617844b9aca206d18724bc, type: 3}
+  zombieCost: 010000000200000005000000
+  zombieQuantity: 0a0000000500000002000000
+  wavesPoints: 0100000001000000020000000400000008000000030000000400000005000000030000000c000000
   waveIndex: 0
   waitTime: 20
   LevelTime: 240
@@ -7071,7 +7074,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 897611358}
   m_HandleRect: {fileID: 897611357}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:

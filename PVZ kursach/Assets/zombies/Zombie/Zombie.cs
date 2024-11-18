@@ -47,7 +47,7 @@ public class Zombie : Entity
         }
 
     }
-    public  void FireDeath()
+    public virtual void FireDeath()
     {
         speed = 0;
         //отключаю все слои аниматора кроме 0-го чтобы все возможные отваливающиеся части зомби не вылетали при анимации сгорания
@@ -70,10 +70,6 @@ public class Zombie : Entity
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
         collider.enabled = false;
         moveDirection = Vector2.zero;
-    }
-    void Start()
-    {
-
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

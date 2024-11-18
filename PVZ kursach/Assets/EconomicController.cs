@@ -48,7 +48,7 @@ public class EconomicController : MonoBehaviour
     }
     public void GoToGame()
     {
-        if (isGameStarted) { return; }
+        if (isGameStarted || uiController.selectButtons.Count == 0) { return; }
         StartCoroutine(GoToGameCorutine());
     }
     public IEnumerator GoToGameCorutine()
