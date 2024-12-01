@@ -5,7 +5,7 @@ using UnityEngine;
 public class Plant : Entity
 {
     // Start is called before the first frame update
-    [SerializeField] float timeToAction;
+    [SerializeField] protected float timeToAction;
     [SerializeField] protected Vector3 posToInstance;
     [SerializeField] int sunsCost;
     [SerializeField] float timeToRecharge;
@@ -38,7 +38,7 @@ public class Plant : Entity
         return false;
     }
     
-    IEnumerator waitForAction()
+    protected virtual IEnumerator waitForAction()
     {
         yield return new WaitForSeconds(timeToAction);
         Action();

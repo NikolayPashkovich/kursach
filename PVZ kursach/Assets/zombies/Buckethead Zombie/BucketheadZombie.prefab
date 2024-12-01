@@ -266,6 +266,7 @@ MonoBehaviour:
   speed: 0.003
   damage: 50
   rb: {fileID: 3776324828704864795}
+  frorzenColor: {r: 0.4117647, g: 0.827451, b: 1, a: 1}
   maxConHealth: 1100
   conSprites:
   - {fileID: -1171863061, guid: e3a023c6d5a65b544ac0e81143656714, type: 3}

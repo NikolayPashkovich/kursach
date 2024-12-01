@@ -50,6 +50,11 @@ public class PlantPlacement : MonoBehaviour
     }
     public void SelectPlacingPlant(SelectButton selectButton)
     {
+        if (this.selectButton == selectButton)
+        {
+            CancelPlacing();
+            return;
+        }
         this.selectButton = selectButton;
         selectButton.Select();
         placingPlantImage.sprite = selectButton.plant.spriteRenderer.sprite;

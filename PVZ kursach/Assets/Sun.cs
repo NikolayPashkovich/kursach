@@ -64,7 +64,7 @@ public class Sun : MonoBehaviour
         if (!isLive) { return; }
         if (transform.position != targetPos)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.fixedDeltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
         }
         liveTime -= Time.deltaTime;
         if (liveTime <= 0)

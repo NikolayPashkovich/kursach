@@ -14,6 +14,11 @@ public class Entity : MonoBehaviour
     [SerializeField] protected Color glareColor;
     protected const float glareSpeed = 5;
     [SerializeField] protected Vector3 positionShift;
+
+    public virtual Color NormalColor()
+    {
+        return normalColor;
+    }
     public virtual void Awake()
     {
         SelectLayer();
@@ -69,15 +74,15 @@ public class Entity : MonoBehaviour
         while (timer < 1)
         {
             timer += Time.deltaTime * glareSpeed;
-            spriteRenderer.color = Color.Lerp(normalColor, glareColor, timer);
+            spriteRenderer.color = Color.Lerp(NormalColor(), glareColor, timer);
             yield return null;
         }
         while (timer > 0)
         {
             timer -= Time.deltaTime * glareSpeed;
-            spriteRenderer.color = Color.Lerp(normalColor, glareColor, timer);
+            spriteRenderer.color = Color.Lerp(NormalColor(), glareColor, timer);
             yield return null;
         }
-        spriteRenderer.color = normalColor;
+        spriteRenderer.color = NormalColor();
     }
 }

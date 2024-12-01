@@ -29,7 +29,7 @@ public class ConHadZombie : Zombie
         if (conHealth > 0)
         {
             conHealth -= damage;
-            conRenderer.sprite = conSprites[Mathf.Min(conSprites.Length, (int)(conSprites.Length * ((float)conHealth / maxConHealth)))];
+            conRenderer.sprite = conSprites[Mathf.Max(0,  Mathf.Min(conSprites.Length, (int)(conSprites.Length * ((float)conHealth / maxConHealth))))];
             if (conHealth < 0)
             {
                 Damage(-damage);

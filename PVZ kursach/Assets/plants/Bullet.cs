@@ -19,6 +19,11 @@ public class Bullet : MonoBehaviour
     {
         return damage;
     }
+    public virtual void Hit(Zombie zombie)
+    {
+        zombie.Damage(damage);
+        Hit();
+    }
     public void Hit()
     {
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
@@ -41,5 +46,14 @@ public class Bullet : MonoBehaviour
             yield return null;
         }
         Destroy(gameObject);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Zombie")
+        {
+            Zombie zombie = collision.gameObject.GetComponent<Zombie>();
+            Hit(zombie);
+        }
+
     }
 }

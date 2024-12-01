@@ -5,11 +5,31 @@ using UnityEngine;
 public class Zombie : Entity
 {
     // Start is called before the first frame update
-    [SerializeField] float speed;
+    [SerializeField] protected float speed;
     [SerializeField] int damage;
     [SerializeField] Rigidbody2D rb;
     Vector2 moveDirection;
-    Plant targetPlant;
+    protected Plant targetPlant;
+
+
+    [SerializeField] Color frorzenColor;
+    protected bool isFrozen = false;
+    private float freezeTimer = 0f;
+    protected const float froozeSpeedCoef = 0.5f;
+    private Coroutine freezeCoroutine = null;
+    public override Color NormalColor()
+    {
+        if (isFrozen) { return frorzenColor; }
+        return base.NormalColor();
+    }
+    public virtual float Speed()
+    {
+        if (isFrozen)
+        {
+            return speed * froozeSpeedCoef;
+        }
+        return speed;
+    }
     public virtual void Awake()
     {
         base.Awake();
@@ -19,11 +39,35 @@ public class Zombie : Entity
         moveDirection = new Vector2(-1, 0);
         animator.SetInteger("Action", 1);
     }
-    private void FixedUpdate()
+    public void SetFreeze(float time)
     {
+        freezeTimer = time; // Обновляем таймер заморозки
+
+        if (!isFrozen && freezeTimer > 0)
+        {
+            isFrozen = true;
+            freezeCoroutine = StartCoroutine(HandleFreeze());
+        }
+    }
+
+    private IEnumerator HandleFreeze()
+    {
+        spriteRenderer.color = frorzenColor; 
+        while (freezeTimer > 0)
+        {
+            freezeTimer -= Time.deltaTime;
+            yield return null; // Ждём следующий кадр
+        }
+        isFrozen = false;
+        spriteRenderer.color = NormalColor(); // Возвращаем цвет
+        freezeCoroutine = null;
+    }
+    protected virtual void FixedUpdate()
+    {
+        animator.SetFloat("speedCoef", isFrozen ? froozeSpeedCoef : 1);
         if (targetPlant == null)
         {
-            rb.MovePosition((Vector2)transform.position + (moveDirection * speed));
+            rb.MovePosition((Vector2)transform.position + (moveDirection * Speed()));
             if (animator.GetInteger("Action") == 2)
             {
                 animator.SetInteger("Action", 1);
@@ -71,17 +115,8 @@ public class Zombie : Entity
         collider.enabled = false;
         moveDirection = Vector2.zero;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Bullet")
-        {
-            Bullet bullet = collision.gameObject.GetComponent<Bullet>();
-            Damage(bullet.GetDamage());
-            bullet.Hit();
-        }
-        
-    }
-    private void OnTriggerStay2D(Collider2D collision)
+    
+    protected virtual void OnTriggerStay2D(Collider2D collision)
     {
         if (targetPlant == null && collision.gameObject.tag == "Plant")
         {
