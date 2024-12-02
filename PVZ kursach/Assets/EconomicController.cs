@@ -38,13 +38,22 @@ public class EconomicController : MonoBehaviour
         plantPlacement.enabled = false;
        
     }
-    private void Start()
+    public void StartLevel(LevelData levelData)
     {
+        zombieSpawner.SetData(levelData);
         mainCam.GoToSelect();
         uiController.SetActiveSelect(true);
         zombieSpawner.enabled = true;
         zombieSpawner.SpawnZombiesForStart();
         zombieSpawner.enabled = false;
+    }
+    private void Start()
+    {
+        //mainCam.GoToSelect();
+        //uiController.SetActiveSelect(true);
+        //zombieSpawner.enabled = true;
+        //zombieSpawner.SpawnZombiesForStart();
+        //zombieSpawner.enabled = false;
     }
     public void GoToGame()
     {

@@ -14,6 +14,13 @@ public class ZombieSpawner : MonoBehaviour
     [SerializeField] float timer;
 
     int[] zombieInLinesCount;
+
+    public void SetData(LevelData levelData)
+    {
+        zombieQuantity = levelData.zombieQuantity;
+        wavesPoints = levelData.wavesPoints;
+        LevelTime = levelData.LevelTime;
+    }
     private void Start()
     {
         zombieInLinesCount = new int[GridManager.Instance.rows];
@@ -76,7 +83,7 @@ public class ZombieSpawner : MonoBehaviour
         List<int> avalibleIndexes = new List<int>();
         for (int i = 0; i < zombieCost.Length; i++)
         {
-            if (points >= zombieCost[i]) { avalibleIndexes.Add(i); }
+            if (points >= zombieCost[i] && zombieQuantity.Length < i) { avalibleIndexes.Add(i); }
         }
         if (avalibleIndexes.Count == 0) 
         {
