@@ -14,6 +14,11 @@ public class ZombieSpawner : MonoBehaviour
     [SerializeField] float timer;
 
     int[] zombieInLinesCount;
+    public bool isEndSpavned { get; private set; }
+
+
+    public bool isPlayerLoose { get; private set; }
+    [SerializeField] float minZombieX;
 
     public void SetData(LevelData levelData)
     {
@@ -31,6 +36,8 @@ public class ZombieSpawner : MonoBehaviour
         {
             Destroy(GridManager.Instance.zombies[i].gameObject);
         }
+        isEndSpavned = false;
+        isPlayerLoose = false;
     }
     private void FixedUpdate()
     {
@@ -43,7 +50,23 @@ public class ZombieSpawner : MonoBehaviour
             //    $"{vawesTimer / LevelTime} > { waveIndex / wavesPoints.Length}");
             SpawnWave(waveIndex);
             waveIndex+=1;
+            if (wavesPoints.Length <= waveIndex)
+            {
+                isEndSpavned = true;
+            }
         }
+        if (!isPlayerLoose)
+        {
+            for (int i = 0; i < GridManager.Instance.zombies.Count; i++)
+            {
+                if (GridManager.Instance.zombies[i].transform.position.x < minZombieX)
+                {
+                    isPlayerLoose = true;
+                    break;
+                }
+            }
+        }
+        EconomicController.instance.UpdateProgressBar(vawesTimer / LevelTime);
     }
     public void SpawnZombiesForStart()
     {
@@ -83,7 +106,7 @@ public class ZombieSpawner : MonoBehaviour
         List<int> avalibleIndexes = new List<int>();
         for (int i = 0; i < zombieCost.Length; i++)
         {
-            if (points >= zombieCost[i] && zombieQuantity.Length < i) { avalibleIndexes.Add(i); }
+            if (points >= zombieCost[i] && zombieQuantity.Length > i && zombieQuantity[i] > 0) { avalibleIndexes.Add(i); }
         }
         if (avalibleIndexes.Count == 0) 
         {

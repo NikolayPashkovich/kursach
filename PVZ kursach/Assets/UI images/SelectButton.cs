@@ -10,7 +10,7 @@ public class SelectButton : MonoBehaviour
     public Plant plant;
     Vector3 startPos;
     public RectTransform rectTransform { get; private set; }
-    Button button;
+    public Button button { get; private set; }
     bool isSelected;
     const float moveTime = 0.5f;
     Image image;
@@ -31,6 +31,7 @@ public class SelectButton : MonoBehaviour
         startPos = rectTransform.anchoredPosition;
         button = gameObject.GetComponent<Button>();
         button.onClick.AddListener(SelectClick);
+        button.onClick.AddListener(uIController.ButtonClickSound);
     }
     public void Select()
     {
@@ -40,6 +41,7 @@ public class SelectButton : MonoBehaviour
     {
         button.onClick.RemoveAllListeners();
         button.onClick.AddListener(TrySelectPlant);
+        button.onClick.AddListener(uIController.ButtonClickSound);
         isGameStarted = true;
         rechargeTimer = timeToRecharge;
     }

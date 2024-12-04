@@ -18,6 +18,8 @@ public class Chomper : Plant
         if (isActive == false || targetZombie != null) { return; }
         targetZombie = zombie;
         animator.SetTrigger("Atack");
+        audio.clip = actionAudio;
+        audio.Play();
     }
     public void KillZombie()
     {

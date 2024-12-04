@@ -11,6 +11,10 @@ public class Plant : Entity
     [SerializeField] float timeToRecharge;
     public float GetTimeToRecharge() { return timeToRecharge; }
     public int GetCost() { return sunsCost; }
+
+    [SerializeField] protected AudioSource audio;
+    [SerializeField] protected AudioClip actionAudio;
+    
     public virtual void Start()
     {
         StartCoroutine(waitForAction());

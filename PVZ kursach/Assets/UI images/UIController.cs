@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
 
+using System.Linq;
 using UnityEngine.UI;
 using UnityEngine;
 
@@ -16,23 +17,130 @@ public class UIController : MonoBehaviour
     [SerializeField] float selectedDragTime;
     [SerializeField] RectTransform selectedTransform;
     public List<SelectButton> selectButtons;
+    [SerializeField] SelectButton[] allSelectButtons;
     public Transform selectButtonsContent;
     public const int selectButtonShift = -5;
 
+    [SerializeField] Slider ProgressBarSlider;
+    [SerializeField] RectTransform[] flagImages;
+
+    [SerializeField] Image endPlantImage;
+    [SerializeField] float endImgMaxSize;
+
+    [SerializeField] CanvasGroup losePanelGroup;
+    [SerializeField] AudioSource buttonClickSound;
     private void Awake()
     {
+        
         selectButtons = new List<SelectButton>();
+    }
+    private void Start()
+    {
+        LoadSelectButtonsFromFile();
+    }
+    public void ButtonClickSound()
+    {
+        buttonClickSound.Play();
+    }
+    public void PutUpFlags(int[] points)
+    {
+        // 1. ¬ычисл€ем среднее значение
+        int pointsLength = points.Length;
+        float sum = 0;
+        foreach (int point in points)
+        {
+            sum += point;
+        }
+        float average = sum / points.Length;
+
+        // 2. —оставл€ем список индексов с наибольшими отклонени€ми от среднего значени€
+        List<int> indexes = new List<int>();
+        List<float> deviations = new List<float>();
+
+        // 3. ¬ычисл€ем отклонение каждого элемента от среднего
+        for (int i = 0; i < points.Length; i++)
+        {
+            float deviation = Mathf.Abs(points[i] - average);
+            deviations.Add(deviation);
+        }
+
+        // 4. Ќаходим 1-3 индекса с наибольшими отклонени€ми
+        var maxDeviations = deviations
+            .Select((deviation, index) => new { deviation, index })
+            .OrderByDescending(x => x.deviation)
+            .Take(3)
+            .ToList();
+
+        // 5. ¬ыводим индексы с наибольшими отклонени€ми
+        foreach (var item in maxDeviations)
+        {
+            indexes.Add(item.index);
+        }
+
+        for (int i = 0; i < indexes.Count; i++)
+        {
+            if (indexes[i] < average) { continue; }
+            flagImages[i].gameObject.SetActive(true);
+            flagImages[i].pivot = new Vector2(1- (float)indexes[i] / pointsLength, 0.25f);
+        }
+
+    }
+    public IEnumerator YouLooseRoutine()
+    {
+        float time = 1;
+        float timer = 0;
+        losePanelGroup.gameObject.SetActive(true);
+        while (timer < time)
+        {
+            timer += Time.deltaTime;
+            float t = timer / time;
+            losePanelGroup.alpha = t;
+            yield return null;
+        }
+    }
+    public IEnumerator endImageRoutine(int plantIndex)
+    {
+        endPlantImage.sprite = allSelectButtons[plantIndex].button.image.sprite;
+        float time = 1;
+        float timer = 0;
+        while(timer < time)
+        {
+            timer += Time.deltaTime;
+            float t = timer / time;
+            endPlantImage.rectTransform.sizeDelta = new Vector2(endImgMaxSize * t, endImgMaxSize * t);
+            yield return null;
+        }
     }
     public static void DeselectButton()
     {
         EventSystem.current.SetSelectedGameObject(null);
     }
+    
     public void GoToGame()
     {
         StartCoroutine( ActivateSelect(false));
         for (int i = 0; i < selectButtons.Count; i++)
         {
             selectButtons[i].GoToGame();
+        }
+    }
+    public void UpdateProgressBar(float value)
+    {
+        ProgressBarSlider.value = value;
+    }
+    void LoadSelectButtonsFromFile()
+    {
+        Debug.Log("LoadFromFile");
+        int[] plants = FileManager.LoadOpenPlants();
+        Debug.Log($"plants count = {plants.Length}");
+        Debug.Log($"allSelectButtons = {allSelectButtons.Length}");
+        for (int i = 0; i < allSelectButtons.Length; i++)
+        {
+            allSelectButtons[i].button.interactable = false;
+        }
+        for (int i = 0; i < plants.Length; i++)
+        {
+            allSelectButtons[plants[i]].button.interactable = true;
         }
     }
     public void SetActiveSelect(bool isActive)

@@ -14,6 +14,7 @@ public class Sun : MonoBehaviour
     [SerializeField] float alphaAnimTime;
     [SerializeField] float liveTime;
     [SerializeField] Collider2D collider;
+    [SerializeField] AudioSource audio;
     bool isLive = true;
     const int SunsQunatity = 25;
     void Start()
@@ -42,6 +43,7 @@ public class Sun : MonoBehaviour
     }
     IEnumerator MoveToStorageOfSuns()
     {
+        audio.Play();
         //targetPos = Camera.main.ScreenToWorldPoint(EconomicController.instance.GetSunsTextPos());
         targetPos = Camera.main.ScreenToWorldPoint(new Vector3(0,Camera.main.pixelHeight));
         Vector3 startPos = transform.position;

@@ -12,6 +12,7 @@ public class Cosilka : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     bool isActive = false;
     [SerializeField] float maxX;
+    [SerializeField] AudioSource audio;
     private void Update()
     {
         if (!isActive) { return; }
@@ -22,6 +23,7 @@ public class Cosilka : MonoBehaviour
             scaleChangeTimer = timeToScaleChange;
             transform.localScale = new Vector2(Mathf.Lerp(minScale.x, maxScale.x, Random.Range(0, 1f)), Mathf.Lerp(minScale.y, maxScale.y, Random.Range(0, 1f)));
         }
+        audio.volume = 1 - Mathf.Max(0, (transform.position.x / maxX));
         if (transform.position.x > maxX)
         {
             Destroy(gameObject);
@@ -34,6 +36,10 @@ public class Cosilka : MonoBehaviour
             Zombie zombie = collision.gameObject.GetComponent<Zombie>();
             zombie.Damage(int.MaxValue);
             isActive = true;
+            if (!audio.isPlaying)
+            {
+                audio.Play();
+            }
         }
 
     }

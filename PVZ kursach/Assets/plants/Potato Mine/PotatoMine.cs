@@ -38,6 +38,8 @@ public class PotatoMine : Plant
     {
         animator.SetTrigger("Boom");
         zombie.Damage(boomDamage);
+        audio.clip = actionAudio;
+        audio.Play();
         for (int i = 0; i < GridManager.Instance.zombies.Count; i++)
         {
             if (GridManager.Instance.zombies[i] != zombie && GridManager.Instance.zombies[i].posInGrid == posInGrid)

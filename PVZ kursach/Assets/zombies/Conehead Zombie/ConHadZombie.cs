@@ -14,11 +14,6 @@ public class ConHadZombie : Zombie
         base.Awake();
         conHealth = maxConHealth;
     }
-    protected override void SelectLayer()
-    {
-        base.SelectLayer();
-        conRenderer.sortingOrder = spriteRenderer.sortingOrder + 1;
-    }
     public override void FireDeath()
     {
         conRenderer.enabled = false;

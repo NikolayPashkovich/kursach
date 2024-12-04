@@ -7,6 +7,8 @@ public class PoleVaultingZombie : Zombie
     bool isRun = true;
     [SerializeField] float runSpeedCoef = 2;
     [SerializeField] float XWhereActivateCollider = 100;
+
+    [SerializeField] AudioClip jumpSound;
     public override float Speed()
     {
         float resSpeed = speed;
@@ -24,7 +26,8 @@ public class PoleVaultingZombie : Zombie
                 animator.SetBool("Jump",true);
                 collider.enabled = false;
                 XWhereActivateCollider = transform.position.x - GridManager.Instance.cellSize.x * 1.5f;
-                
+                audioSource.clip = jumpSound;
+                audioSource.Play();
                 StartCoroutine(JumpProcess());
             }
         }

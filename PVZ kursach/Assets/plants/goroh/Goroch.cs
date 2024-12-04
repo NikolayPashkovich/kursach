@@ -12,6 +12,8 @@ public class Goroch : Plant
         {
             Instantiate(bullet.gameObject, transform.position + posToInstance, transform.rotation);
             animator.SetTrigger("Atack");
+            audio.clip = actionAudio;
+            audio.Play();
         }
        
     }

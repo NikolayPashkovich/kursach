@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152ad9ad6a6efec438646984b0507486, type: 3}
   m_Name: Level1
   m_EditorClassIdentifier: 
+  levelNumber: 1
+  levelOpenPlant: 1
   zombieQuantity: 0f000000
   wavesPoints: 01000000010000000100000001000000010000000100000001000000010000000100000005000000
   LevelTime: 180

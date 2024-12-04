@@ -13,6 +13,9 @@ public class GridManager : MonoBehaviour
     public List<Zombie> zombies = new List<Zombie>();
     public List<Plant> plants = new List<Plant>();
 
+    
+
+    
     private void Awake()
     {
         // Singleton implementation

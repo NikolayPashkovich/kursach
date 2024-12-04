@@ -37,6 +37,9 @@ public class Sunflower : Plant
     }
     void SpawnSun()
     {
+
+        audio.clip = actionAudio;
+        audio.Play();
         sunPrefab.targetPos = transform.position + new Vector3(Random.Range(-0.25f, 0.25f), 0, -5);
         Instantiate(sunPrefab.gameObject, transform.position + posToInstance, Quaternion.Euler(0, 0, 0));
     }

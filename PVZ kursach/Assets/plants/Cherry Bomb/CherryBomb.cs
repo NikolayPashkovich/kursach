@@ -6,6 +6,8 @@ public class CherryBomb : Plant
 {
     public void Boom()
     {
+        audio.clip = actionAudio;
+        audio.Play();
         for (int i = 0; i < GridManager.Instance.zombies.Count; i++)
         {
             Vector2Int zombiePosInGrid = GridManager.Instance.zombies[i].posInGrid;

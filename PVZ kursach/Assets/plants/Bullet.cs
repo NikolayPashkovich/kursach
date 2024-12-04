@@ -11,6 +11,8 @@ public class Bullet : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] Collider2D collider;
     [SerializeField] SpriteRenderer spriteRenderer;
+
+    [SerializeField] AudioSource hitAudio;
     private void Start()
     {
         rb.AddForce(direction * speed);
@@ -29,6 +31,7 @@ public class Bullet : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
         collider.enabled = false;
         animator.SetTrigger("hit");
+        hitAudio.Play();
     }
     public void DestroyObj()
     {

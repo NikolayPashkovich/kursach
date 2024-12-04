@@ -10,17 +10,28 @@ public class Zombie : Entity
     [SerializeField] Rigidbody2D rb;
     Vector2 moveDirection;
     protected Plant targetPlant;
-
+    [SerializeField] SpriteRenderer[] additionalRenderers;
 
     [SerializeField] Color frorzenColor;
     protected bool isFrozen = false;
     private float freezeTimer = 0f;
-    protected const float froozeSpeedCoef = 0.5f;
+    protected const float froozeSpeedCoef = 0.6f;
     private Coroutine freezeCoroutine = null;
+    [SerializeField] protected AudioSource audioSource;
+    [SerializeField] AudioClip[] brainsClips;
+    [SerializeField] AudioClip[] eatSounds;
     public override Color NormalColor()
     {
         if (isFrozen) { return frorzenColor; }
         return base.NormalColor();
+    }
+    protected override void SelectLayer()
+    {
+        base.SelectLayer();
+        for (int i = 0; i < additionalRenderers.Length; i++)
+        {
+            additionalRenderers[i].sortingOrder = spriteRenderer.sortingOrder + 1;
+        }
     }
     public virtual float Speed()
     {
@@ -38,6 +49,8 @@ public class Zombie : Entity
     {
         moveDirection = new Vector2(-1, 0);
         animator.SetInteger("Action", 1);
+        audioSource.clip = brainsClips[Random.Range(0, brainsClips.Length)];
+        audioSource.Play();
     }
     public void SetFreeze(float time)
     {
@@ -107,6 +120,8 @@ public class Zombie : Entity
     {
         if (targetPlant == null) { return; }
         targetPlant.Damage(damage);
+        audioSource.clip = eatSounds[Random.Range(0,eatSounds.Length)];
+        audioSource.Play();
     }
    
     void Dead()
