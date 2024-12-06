@@ -23,6 +23,7 @@ public class UIController : MonoBehaviour
 
     [SerializeField] Slider ProgressBarSlider;
     [SerializeField] RectTransform[] flagImages;
+    [SerializeField] float flagCoef = 0.6f;
 
     [SerializeField] Image endPlantImage;
     [SerializeField] float endImgMaxSize;
@@ -79,7 +80,7 @@ public class UIController : MonoBehaviour
 
         for (int i = 0; i < indexes.Count; i++)
         {
-            if (indexes[i] < average) { continue; }
+            if (indexes[i] < average * flagCoef) { continue; }
             flagImages[i].gameObject.SetActive(true);
             flagImages[i].pivot = new Vector2(1- (float)indexes[i] / pointsLength, 0.25f);
         }
