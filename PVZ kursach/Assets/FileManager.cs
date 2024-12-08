@@ -1,14 +1,9 @@
-using System.IO; // Для работы с файлами
+using System.IO; 
 using UnityEngine;
 
 public static class FileManager
 {
-    // Путь к файлу сохранения
     private static string FilePath => Path.Combine(Application.persistentDataPath, "savefile.json");
-
-    /// <summary>
-    /// Проверяет существование файла и создает новый с базовыми значениями, если его нет.
-    /// </summary>
     public static void EnsureFileExists()
     {
         if (!File.Exists(FilePath))
@@ -23,10 +18,6 @@ public static class FileManager
             Debug.Log("Save file created with default values.");
         }
     }
-
-    /// <summary>
-    /// Сохранение всех данных в файл
-    /// </summary>
     public static void SaveData(SaveData data)
     {
         try
@@ -40,10 +31,6 @@ public static class FileManager
             Debug.LogError($"Failed to save data: {ex.Message}");
         }
     }
-
-    /// <summary>
-    /// Загрузка всех данных из файла
-    /// </summary>
     public static SaveData LoadData()
     {
         try
@@ -63,41 +50,25 @@ public static class FileManager
         catch (System.Exception ex)
         {
             Debug.LogError($"Failed to load data: {ex.Message}");
-            return new SaveData(); // Возвращаем пустой объект при ошибке
+            return new SaveData(); 
         }
     }
-
-    /// <summary>
-    /// Сохранение значения LevelNumber
-    /// </summary>
     public static void SaveLevelNumber(int levelNumber)
     {
         SaveData data = LoadData();
         data.levelNumber = levelNumber;
         SaveData(data);
     }
-
-    /// <summary>
-    /// Загрузка значения LevelNumber
-    /// </summary>
     public static int LoadLevelNumber()
     {
         return LoadData().levelNumber;
     }
-
-    /// <summary>
-    /// Сохранение значения OpenPlants
-    /// </summary>
     public static void SaveOpenPlants(int[] openPlants)
     {
         SaveData data = LoadData();
         data.openPlants = openPlants;
         SaveData(data);
     }
-
-    /// <summary>
-    /// Загрузка значения OpenPlants
-    /// </summary>
     public static int[] LoadOpenPlants()
     {
         return LoadData().openPlants;
@@ -122,10 +93,6 @@ public static class FileManager
         }
     }
 }
-
-/// <summary>
-/// Класс для хранения данных
-/// </summary>
 [System.Serializable]
 public class SaveData
 {

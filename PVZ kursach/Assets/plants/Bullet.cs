@@ -57,6 +57,5 @@ public class Bullet : MonoBehaviour
             Zombie zombie = collision.gameObject.GetComponent<Zombie>();
             Hit(zombie);
         }
-
     }
 }

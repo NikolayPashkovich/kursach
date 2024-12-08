@@ -41,18 +41,14 @@ public class Plant : Entity
         }
         return false;
     }
-    
     protected virtual IEnumerator waitForAction()
     {
         yield return new WaitForSeconds(timeToAction);
         Action();
         StartCoroutine(waitForAction());
     }
-    
     protected virtual void Action()
     {
 
     }
-    // Update is called once per frame
-    
 }

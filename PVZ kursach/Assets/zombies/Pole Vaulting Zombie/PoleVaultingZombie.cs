@@ -51,5 +51,4 @@ public class PoleVaultingZombie : Zombie
         collider.enabled = true;
         
     }
-
 }

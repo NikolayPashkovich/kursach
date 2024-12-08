@@ -8,7 +8,6 @@ public class PlantPlacement : MonoBehaviour
     public GameObject plantPrefab;  // Префаб растения
     public LineRenderer horizontalLine;  // Линия для горизонтальной полосы
     public LineRenderer verticalLine;    // Линия для вертикальной полосы
-
     [SerializeField] SpriteRenderer placingPlantImage;
     Vector3 placingPlantShift;
     private SelectButton selectButton = null;
@@ -145,20 +144,14 @@ public class PlantPlacement : MonoBehaviour
         
     void DrawLines(Vector3 cellPosition)
     {
-        
-
-        // Рисуем горизонтальную линию
         horizontalLine.SetPosition(0, new Vector3((gridManager.gridOrigin.x-gridManager.cellSize.x/2), cellPosition.y, 0));
         horizontalLine.SetPosition(1, new Vector3((gridManager.gridOrigin.x - gridManager.cellSize.x / 2) + gridManager.cols * gridManager.cellSize.x, cellPosition.y, 0));
-
-        // Рисуем вертикальную линию
         verticalLine.SetPosition(0, new Vector3(cellPosition.x, (gridManager.gridOrigin.y - gridManager.cellSize.y / 2), 0));
         verticalLine.SetPosition(1, new Vector3(cellPosition.x, (gridManager.gridOrigin.y - gridManager.cellSize.y / 2) + gridManager.rows * gridManager.cellSize.y, 0));
     }
 
     void PlacePlant(Vector2Int gridCell,Vector3 cellPosition)
     {
-        
         for (int i = 0; i <GridManager.Instance.plants.Count; i++)
         {
             if (GridManager.Instance.plants[i].posInGrid == gridCell) { return; }

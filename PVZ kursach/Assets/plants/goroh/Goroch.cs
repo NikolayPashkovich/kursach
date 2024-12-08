@@ -17,9 +17,4 @@ public class Goroch : Plant
         }
        
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -62,7 +62,6 @@ public class Zombie : Entity
             freezeCoroutine = StartCoroutine(HandleFreeze());
         }
     }
-
     private IEnumerator HandleFreeze()
     {
         spriteRenderer.color = frorzenColor; 
@@ -107,7 +106,6 @@ public class Zombie : Entity
     public virtual void FireDeath()
     {
         speed = 0;
-        //отключаю все слои аниматора кроме 0-го чтобы все возможные отваливающиеся части зомби не вылетали при анимации сгорания
         for (int i = 1; i < animator.layerCount; i++)
         {
             animator.SetLayerWeight(i, 0);
@@ -123,14 +121,12 @@ public class Zombie : Entity
         audioSource.clip = eatSounds[Random.Range(0,eatSounds.Length)];
         audioSource.Play();
     }
-   
     void Dead()
     {
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
         collider.enabled = false;
         moveDirection = Vector2.zero;
     }
-    
     protected virtual void OnTriggerStay2D(Collider2D collision)
     {
         if (targetPlant == null && collision.gameObject.tag == "Plant")
