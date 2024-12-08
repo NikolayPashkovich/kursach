@@ -46,6 +46,8 @@ public class ZombieSpawner : MonoBehaviour
         float vawesTimer = timer - waitTime;
         if (vawesTimer / LevelTime > (float)waveIndex / wavesPoints.Length && waveIndex < wavesPoints.Length)
         {
+            //Debug.Log($"vavesTimer = {vawesTimer}\nLevelTime = {LevelTime}\nLevelPurcent = {vawesTimer / LevelTime}\nwaveIndex = {waveIndex}\nwavePoints = {wavesPoints.Length}\nwavePurcent = {waveIndex / wavesPoints.Length}\n" +
+            //    $"{vawesTimer / LevelTime} > { waveIndex / wavesPoints.Length}");
             SpawnWave(waveIndex);
             waveIndex+=1;
             if (wavesPoints.Length <= waveIndex)

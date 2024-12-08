@@ -8,6 +8,7 @@ public class ConHadZombie : Zombie
     int conHealth;
     [SerializeField] Sprite[] conSprites;
     [SerializeField] SpriteRenderer conRenderer;
+    // Start is called before the first frame update
     public override void Awake()
     {
         base.Awake();
@@ -39,5 +40,10 @@ public class ConHadZombie : Zombie
             }
             base.Damage(damage);
         }
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }

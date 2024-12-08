@@ -33,6 +33,7 @@ public class PotatoMine : Plant
     {
         OnTriggerEnter2D(collision);
     }
+
     public void Boom(Zombie zombie)
     {
         animator.SetTrigger("Boom");

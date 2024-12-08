@@ -6,7 +6,9 @@ public class Chomper : Plant
 {
     Zombie targetZombie;
     bool isActive = true;
-    public override void Start() { }
+    public override void Start()
+    {
+    }
     public bool isCanSetTarget()
     {
         return isActive && (targetZombie == null);

@@ -4,8 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class EconomicController : MonoBehaviour
 {
+    // Start is called before the first frame update
     public static EconomicController instance { get; private set; }
+    
     public int Suns { get; private set; }
+    
+
     [SerializeField] float timeToSpawnSun;
     [SerializeField] Sun sunPrefab;
     float sunsTimer =0;
@@ -23,6 +27,7 @@ public class EconomicController : MonoBehaviour
     public void TrySelectPlant(SelectButton selectButton)
     {
         if (selectButton.plant.GetCost() > Suns) { return; }
+        //RemoveSuns(plant.GetCost());
         plantPlacement.SelectPlacingPlant(selectButton);
     }
     
@@ -54,6 +59,14 @@ public class EconomicController : MonoBehaviour
         zombieSpawner.enabled = true;
         zombieSpawner.SpawnZombiesForStart();
         zombieSpawner.enabled = false;
+    }
+    private void Start()
+    {
+        //mainCam.GoToSelect();
+        //uiController.SetActiveSelect(true);
+        //zombieSpawner.enabled = true;
+        //zombieSpawner.SpawnZombiesForStart();
+        //zombieSpawner.enabled = false;
     }
     public void GoToGame()
     {
@@ -93,6 +106,13 @@ public class EconomicController : MonoBehaviour
                 musicController.Loose();
             }
         }
+    }
+    private void Update()
+    {
+        //if (Input.GetKeyDown(KeyCode.R))
+        //{
+        //    StartCoroutine(EndGameRoutine());
+        //}
     }
     public void EndSelect()
     {

@@ -9,7 +9,10 @@ public class MusicController : MonoBehaviour
     [SerializeField] AudioClip mainBattleClip;
     [SerializeField] AudioClip winClip;
     [SerializeField] AudioClip looseClip;
-    
+    void Start()
+    {
+        
+    }
     public void GoToGame()
     {
         audio.clip = mainBattleClip;
